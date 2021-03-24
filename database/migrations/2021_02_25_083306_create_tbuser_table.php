@@ -18,10 +18,10 @@ class CreateTbuserTable extends Migration
     {
         Schema::create('tbuser', function (Blueprint $table) {
             $table->string('id_user', 10)->primary();
-            $table->string('username')->unique();
+            $table->string('username', 100)->unique();
             $table->enum('role',['admin', 'pemilik','wisatawan']);
             $table->string('password');
-            $table->enum('status',['enable', 'disable']);
+            $table->enum('status',['enable', 'disable'])->default('disable');
             $table->timestamps();
         });
 
@@ -29,6 +29,7 @@ class CreateTbuserTable extends Migration
             'id_user'   => makeid::createId(10),
             'username'  => 'dika',
             'role'      => 'Admin',
+            'status'    => 'enable',
             'password'  => Hash::make('123456')
         ]);
     }
