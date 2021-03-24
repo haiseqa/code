@@ -21,7 +21,7 @@ class CreateTbuserTable extends Migration
             $table->string('username')->unique();
             $table->enum('role',['admin', 'pemilik','wisatawan']);
             $table->string('password');
-            $table->enum('status',['enable', 'disable'])
+            $table->enum('status',['enable', 'disable']);
             $table->timestamps();
         });
 
