@@ -40,6 +40,7 @@ Route::group(['middleware' => 'login'], function(){
 
     //Vila
     Route::get('/vila/tambah', 'page\pemilik_controller@tambah_vila')->name('pemilik.vila.tambah');
+    Route::post('/vila/tambah', 'page\pemilik_controller@tambah_vila_post');
 
     Route::group([
         'prefix'        => 'admin',
@@ -50,6 +51,7 @@ Route::group(['middleware' => 'login'], function(){
         route::get('/pemilik/edit/{idpemilik}','page\admin_controller@editpemilik')->name('admin.pemilik.edit');
         route::post('/pemilik/edit/{idpemilik}','page\admin_controller@posteditpemilik');
         route::get('/pemilik/delete/{id_user}','page\admin_controller@deletepemilik')->name('admin.pemilik.delete');
+        route::get('admin/daftarvilla', 'page\admin_controller@daftarvilla')->name('admin.daftarvilla');
 
     });
 
@@ -61,6 +63,7 @@ Route::group(['middleware' => 'login'], function(){
 
         Route::get('/daftarvilla', 'page\pemilik_controller@daftarvilla')->name('pemilik.daftarvilla');
         Route::get('/registrasi_villa', 'page\pemilik_controller@registrasi_villa')->name('pemilik.registrasi_villa');
+
     });
 
     Route::group([

@@ -51,5 +51,9 @@ class admin_controller extends Controller
 
     }
 
+    function daftarvilla(){
+        return view('Page.admin.daftarvilla');
+    }
+
 
 }

@@ -20,6 +20,7 @@ class CreateTbvillaTable extends Migration
             $table->string('nama_villa');
             $table->string('alamat_villa');
             $table->unsignedBigInteger('harga_villa');
+            $table->longText('deskripsi');
             $table->string('longitude');
             $table->string('latitude');
             $table->string('status');

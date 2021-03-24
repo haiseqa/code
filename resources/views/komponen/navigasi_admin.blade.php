@@ -14,10 +14,16 @@
          <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
        </a>
      </li>
-     <li>
 
+     <li>
         <a href="{{route('admin.pemilik')}}" class="waves-effect">
          <i class="zmdi zmdi-view-dashboard"></i> <span>Pemilik</span>
+       </a>
+      </li>
+
+      <li>
+        <a href="{{route('admin.daftarvilla')}}" class="waves-effect">
+         <i class="zmdi zmdi-view-dashboard"></i> <span>Daftar Villa</span>
        </a>
       </li>
 
