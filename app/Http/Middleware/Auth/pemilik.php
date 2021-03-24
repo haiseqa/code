@@ -16,6 +16,12 @@ class pemilik
      */
     public function handle($request, Closure $next)
     {
-        return Session::has('role') ? ((Session::get('role') === 'pemilik') ? $next($request) : redirect()->route('home')) : redirect()->route('home');
+        return Session::has('role')
+        ? ((Session::get('role') === 'pemilik')
+        ? ((Session::get('status') === 'enable')
+        ? $next($request)
+        : redirect()->route('pemilik.vila.tambah'))
+        : redirect()->route('home'))
+        : redirect()->route('home');
     }
 }

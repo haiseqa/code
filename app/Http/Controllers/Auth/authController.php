@@ -31,7 +31,8 @@ class authController extends Controller
         $req->session()->put([
             'login'     => true,
             'iduser'    => $user->id_user,
-            'role'      => $user->role
+            'role'      => $user->role,
+            'status'    => $user->status
         ]);
         return back();
     }

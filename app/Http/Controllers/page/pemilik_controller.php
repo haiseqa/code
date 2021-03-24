@@ -21,4 +21,8 @@ class pemilik_controller extends Controller
     function registrasi_villa(){
         return view('Page.pemilik.registrasi_villa');
     }
+
+    function tambah_vila(Request $req){
+        return "Tambah";
+    }
 }

@@ -24,6 +24,7 @@ Route::group(['middleware' => 'notlogin'], function(){
 
 Route::group(['middleware' => 'login'], function(){
     Route::get('/logout', 'Auth\authController@logout')->name('logout');
+
     Route::get('/', function(){
         if(authUser::isadmin()){
             return redirect()->route('admin');
@@ -36,6 +37,9 @@ Route::group(['middleware' => 'login'], function(){
 
         }
     })->name('home');
+
+    //Vila
+    Route::get('/vila/tambah', 'page\pemilik_controller@tambah_vila')->name('pemilik.vila.tambah');
 
     Route::group([
         'prefix'        => 'admin',
@@ -54,6 +58,7 @@ Route::group(['middleware' => 'login'], function(){
         'middleware'    => ['pemilik']
     ], function(){
         Route::get('/', 'page\pemilik_controller@dashboard')->name('pemilik');
+
         Route::get('/daftarvilla', 'page\pemilik_controller@daftarvilla')->name('pemilik.daftarvilla');
         Route::get('/registrasi_villa', 'page\pemilik_controller@registrasi_villa')->name('pemilik.registrasi_villa');
     });
