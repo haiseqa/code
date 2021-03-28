@@ -41,6 +41,7 @@ Route::group(['middleware' => 'login'], function(){
     //Vila
     Route::get('/vila/tambah', 'page\pemilik_controller@tambah_vila')->name('pemilik.vila.tambah');
     Route::post('/vila/tambah', 'page\pemilik_controller@tambah_vila_post');
+    Route::post('/edit_villa', 'page\pemilik_controller@edit_villa_post')->name('pemilik.villa.edit');
 
     Route::group([
         'prefix'        => 'admin',

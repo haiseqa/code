@@ -15,8 +15,15 @@ class pemilik_controller extends Controller
         return view('Page.pemilik.dashboard');
     }
 
-    function daftarvilla(){
-        return view('Page.pemilik.daftarvilla');
+    function daftarvilla(Request $req){
+        $villa = tbvilla::join('tbpemilik as pemilik', 'pemilik.id_pemilik', '=', 'tbvilla.id_villa')
+        ->select('tbvilla.*')
+        ->where([
+            'pemilik.id_user'   => $req->session()->get('iduser')
+        ])->get();
+        return view('Page.pemilik.daftarvilla',[
+            'villa'     =>$villa
+        ]);
     }
 
     function registrasi_villa(){
@@ -24,7 +31,22 @@ class pemilik_controller extends Controller
     }
 
     function tambah_vila(Request $req){
-        return view('Page.pemilik.tambah_villa');
+        $villa = tbvilla::join('tbpemilik as pemilik', 'pemilik.id_pemilik', '=', 'tbvilla.id_pemilik')
+        ->where([
+            'pemilik.id_user' => $req->session()->get('iduser')
+        ])->get()->toJson();
+        // dd($villa);
+        return view('Page.pemilik.tambah_villa',[
+            'data_villa' => $villa
+        ]);
+    }
+
+    function edit_villa_post(Request $req){
+        $villa = tbvilla::find($req->input('id_villa_modal'))->update($req->all());
+        if($villa){
+            return redirect()->route('pemilik.vila.tambah')->with('message', 'berhasil');
+        }
+        return redirect()->route('pemilik.vila.tambah')->with('message', 'gagal');
     }
 
     function tambah_vila_post(Request $req){
@@ -47,10 +69,17 @@ class pemilik_controller extends Controller
             'deskripsi'     => $data['deskripsi'],
             'longitude'     => $data['longitude'],
             'latitude'      => $data['latitude'],
+            'status'        => $data['status']
         ]);
 
         if($villa){
-            return back()->with('message', 'data villa berhasil ditambahkan');
+            tbuser::find($req->session()->get('iduser'))->update([
+                'status'    => 'enable'
+            ]);
+            $req->session()->put([
+                'status'    => 'enable'
+            ]);
+            return redirect()->route('pemilik.registrasi_villa')->with('message', 'data villa berhasil ditambahkan');
         }
         return back()->with('message', 'data villa gagal ditambahkan');
     }

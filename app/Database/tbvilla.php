@@ -16,6 +16,7 @@ class tbvilla extends Model
         'nama_villa',
         'alamat_villa',
         'harga_villa',
+        'deskripsi',
         'longitude',
         'latitude',
         'status'
