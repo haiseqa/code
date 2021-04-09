@@ -25,6 +25,7 @@ class CreateTbpemilikTable extends Migration
             $table->string('alamat');
             $table->string('email')->unique();
             $table->string('nohp',12);
+            $table->string('foto_profile')->nullable();
             $table->timestamps();
         });
 

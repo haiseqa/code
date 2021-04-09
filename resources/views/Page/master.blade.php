@@ -105,16 +105,16 @@
   <ul class="navbar-nav align-items-center right-nav-link">
     <li class="nav-item">
       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
-        <span class="user-profile"><img src="{{ asset('dashboard/images/avatars/avatar-13.png') }}" class="img-circle" alt="user avatar"></span>
+        <span class="user-profile"><img src="{{ !Session::has('foto_profile') ? asset('dashboard/images/avatars/avatar-13.png') : asset(Session::get('foto_profile')) }}" class="img-circle" alt="user avatar"></span>
       </a>
       <ul class="dropdown-menu dropdown-menu-right">
        <li class="dropdown-item user-details">
-        <a href="javaScript:void();">
+        <a href="{{route('pemilik.profile_pemilik')}}">
            <div class="media">
-             <div class="avatar"><img class="align-self-start mr-3" src="{{ asset('dashboard/images/avatars/avatar-13.png') }}" alt="user avatar"></div>
+             <div class="avatar"><img class="align-self-start mr-3" src="{{ !Session::has('foto_profile') ? asset('dashboard/images/avatars/avatar-13.png') : asset(Session::get('foto_profile')) }}" alt="user avatar"></div>
             <div class="media-body">
-            <h6 class="mt-2 user-title">Katrina Mccoy</h6>
-            <p class="user-subtitle">mccoy@example.com</p>
+            <h6 class="mt-2 user-title">{{Session::has('nama') ? Session::get('nama') : "Administrator"}}</h6>
+            <p class="user-subtitle">{{Session::has('email') ? Session::get('email') : "Administrator@admin.com"}}</p>
             </div>
            </div>
           </a>

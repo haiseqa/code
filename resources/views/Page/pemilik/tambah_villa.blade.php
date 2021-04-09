@@ -40,8 +40,10 @@
                                 <tr>
                                     <td style="width: 15%;">Status</td>
                                     <td style="width: 1%;"> : </td>
-                                    <td><input type="text" id="status" class="form-control" name="status"
-                                            placeholder="status" required>
+                                    <td><select name="status" id="status" class="form-control input-shadow" placeholder="Status Villa" required>
+                                        <option value="available">available</option>
+                                        <option value="not available">not available</option>
+                                    </select>
                                     </td>
                                 </tr>
 

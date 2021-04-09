@@ -20,7 +20,6 @@
           <i class="zmdi zmdi-view-dashboard"></i> <span>Daftar Villa</span><i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-            <li><a href="{{route('pemilik.registrasi_villa')}}"><i class="zmdi zmdi-star-outline"></i> Registrasi Villa</a></li>
             <li><a href="{{route('pemilik.daftarvilla')}}"><i class="zmdi zmdi-star-outline"></i> Data Villa</a></li>
             <li><a href="index3.html"><i class="zmdi zmdi-star-outline"></i> Dashboard v3</a></li>
             <li><a href="index4.html"><i class="zmdi zmdi-star-outline"></i> Dashboard v4</a></li>

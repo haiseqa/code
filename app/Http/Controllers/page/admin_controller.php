@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Database\tbuser;
 use App\Database\tbpemilik;
+use App\Database\tbvilla;
 
 class admin_controller extends Controller
 {
@@ -52,7 +53,23 @@ class admin_controller extends Controller
     }
 
     function daftarvilla(){
-        return view('Page.admin.daftarvilla');
+        $villa = tbvilla::join('tbpemilik as pemilik', 'pemilik.id_pemilik', '=', 'tbvilla.id_pemilik')
+        ->select('tbvilla.*')
+        ->get();
+        //  dd($villa);
+        return view('Page.admin.daftarvilla',[
+            'villa'     =>$villa
+        ]);
+    }
+
+    function change_status_villa(Request $req, $cmd){
+        $villa = tbvilla::find($req->input('id_villa'))->update([
+            'status'    =>$cmd
+        ]);
+        if($villa){
+            return back()->with('message', "Data Kos Berhasil Diperbarui");
+        }
+        return back()->with('message', "Data Kos Gagal Diperbarui");
     }
 
 

@@ -8,6 +8,8 @@ use App\Database\tbuser;
 use App\Database\tbpemilik;
 use App\Database\tbvilla;
 use App\Utils\makeid;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class pemilik_controller extends Controller
 {
@@ -16,11 +18,12 @@ class pemilik_controller extends Controller
     }
 
     function daftarvilla(Request $req){
-        $villa = tbvilla::join('tbpemilik as pemilik', 'pemilik.id_pemilik', '=', 'tbvilla.id_villa')
+        $villa = tbvilla::join('tbpemilik as pemilik', 'pemilik.id_pemilik', '=', 'tbvilla.id_pemilik')
         ->select('tbvilla.*')
         ->where([
             'pemilik.id_user'   => $req->session()->get('iduser')
         ])->get();
+        //  dd($villa);
         return view('Page.pemilik.daftarvilla',[
             'villa'     =>$villa
         ]);
@@ -72,6 +75,7 @@ class pemilik_controller extends Controller
             'status'        => $data['status']
         ]);
 
+
         if($villa){
             tbuser::find($req->session()->get('iduser'))->update([
                 'status'    => 'enable'
@@ -82,5 +86,56 @@ class pemilik_controller extends Controller
             return redirect()->route('pemilik.registrasi_villa')->with('message', 'data villa berhasil ditambahkan');
         }
         return back()->with('message', 'data villa gagal ditambahkan');
+    }
+
+    function profile_pemilik(Request $req){
+        $user = tbpemilik::join('tbuser', 'tbuser.id_user', '=', 'tbpemilik.id_user')
+        ->select('tbpemilik.*', 'tbuser.username')
+        ->where([
+            'tbuser.id_user' =>$req->session()->get('iduser')
+        ])->first();
+        // dd($user);
+        return view('Page.pemilik.profile_pemilik', [
+            'user' =>$user
+        ]);
+    }
+
+    function profile_pemilik_post (Request $req){
+        // dd($req->all());
+        $data = $req->all();
+        $data_update = array();
+        if($req->hasFile('fileProfile')){
+            $imageName = makeid::createId(10).".".$req->file('fileProfile')->extension();
+            $path = Storage::disk('public')->putFileAs('profile', $req->file('fileProfile'), $imageName);
+            $data_update['foto_profile'] = $path;
+            $req->session()->put([
+                'foto_profile'  => $path
+            ]);
+        }
+        $data_update['nama'] = $data['nama'];
+        $data_update['nohp'] = $data['nohp'];
+        $data_update['alamat'] = $data['alamat'];
+
+        $pemilik = tbpemilik::find($data['idpemilik'])->update($data_update);
+        if($pemilik){
+            return back()->with('message', 'Profile Berhasil Diupdate');
+        }
+        return back()->with('Profile Gagal Diupdate');
+    }
+
+    function profile_password_post(Request $req){
+        $user = tbuser::find($req->input('iduser'));
+        if(!Hash::check($req->input('oldPassword'), $user->password)){
+            return redirect()->route(pemilik.profile_pemilik)->with('message', 'Password Lama Salah');
+        }
+        $user->update([
+            'password'  =>Hash::make($req->input('newPassword'))
+        ]);
+
+        if($user){
+            return redirect()->route('pemilik.profile_pemilik')->with('message', 'Password Berhasil Diganti');
+        }
+        return redirect()->route('pemilik.profile_pemilik')->with('message', 'Password Gagal Diganti');
+
     }
 }

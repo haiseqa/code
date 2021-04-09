@@ -24,6 +24,7 @@ class CreateTbvillaTable extends Migration
             $table->string('longitude');
             $table->string('latitude');
             $table->string('status');
+            $table->enum('status_villa',['enable', 'disable'])->default('disable');
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header"><i class="fa fa-table"></i> Data Villa
-        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#addvilla">Add Villa</button>
+        {{-- <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#addvilla">Add Villa</button> --}}
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -30,13 +30,24 @@
                 <td>{{$item->nama_villa}}</td>
                 <td>{{$item->alamat_villa}}</td>
                 <td>{{$item->harga_villa}}</td>
-                <td>{{$item->deskripsi}}</td>
+                <td>{!!$item->deskripsi!!}</td>
                 <td>{{$item->longitude}}</td>
                 <td>{{$item->latitude}}</td>
-                <td>{{$item->status}}</td>
-              </tr>
+                <td>{{$item->status === 'enable' ? "Aktif" : "Tidak Aktif"}}</td>
+
+                <td>
+                    <form class="formdelete"
+                        action="#" method="GET">
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+
+                </td>
+            </tr>
+
+            @endforeach
         </tbody>
-        @endforeach
+
     </table>
     </div>
     </div>

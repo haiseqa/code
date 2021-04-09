@@ -17,6 +17,7 @@ class tbpemilik extends Model
         'jenis_kelamin',
         'alamat',
         'nohp',
-        'email'
+        'email',
+        'foto_profile'
     ];
 }
