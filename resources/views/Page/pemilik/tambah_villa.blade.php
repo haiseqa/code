@@ -11,7 +11,7 @@
                         <h4>Tambah Villa</h4>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="">
+                        <form method="POST" action="" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <table style="width: 100%;">
                                 <tr>
@@ -48,10 +48,16 @@
                                 </tr>
 
                                 <tr>
+                                    <td style="width: 15%">Select File</td>
+                                    <td style="width: 1%"> : </td>
+                                    <td><input type="file" class="form-control" id="input-8" name="file[]" required multiple></td>
+                                <tr>
+
+
+                                <tr>
                                     <td style="width: 15%;">About Villa</td>
                                     <td style="width: 1%;"> : </td>
                                     <td><textarea class="form-control" rows="4" id="input-9" name="deskripsi" required></textarea>
-
                                     </td>
                                 </tr>
 
@@ -134,6 +140,12 @@
                             </td>
                         </tr>
                         </tr>
+                        <div class="form-group row">
+                            <label for="input-8" class="col-sm-2 col-form-label">Select File</label>
+                            <div class="col-sm-10">
+                              <input type="file" class="form-control" id="input-8" name="file" required>
+                            </div>
+
                         <tr>
                             <td style="width: 15%;">Latitude</td>
                             <td style="width: 1%;"> : </td>

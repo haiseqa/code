@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\page;
 
+use App\Database\tbadmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Database\tbuser;
 use App\Database\tbpemilik;
 use App\Database\tbvilla;
+use App\Utils\makeid;
+use Illuminate\Support\Facades\Hash;
 
 class admin_controller extends Controller
 {
@@ -64,12 +67,61 @@ class admin_controller extends Controller
 
     function change_status_villa(Request $req, $cmd){
         $villa = tbvilla::find($req->input('id_villa'))->update([
-            'status'    =>$cmd
+            'status_villa'    =>$cmd
         ]);
         if($villa){
             return back()->with('message', "Data Kos Berhasil Diperbarui");
         }
         return back()->with('message', "Data Kos Gagal Diperbarui");
+    }
+
+    function profile_admin(Request $req){
+        $user = tbadmin::join('tbuser', 'tbuser.id_user', '=', 'tbadmin.id_user')
+        ->select('tbadmin.*', 'tbuser.username')
+        ->where([
+            'tbuser.id_user' =>$req->session()->get('iduser')
+        ])->first();
+
+        return view('Page.admin.profile_admin', [
+            'user' =>$user
+        ]);
+    }
+
+    function profile_admin_post (Request $req){
+        $data = $req->all();
+        $data_update = array();
+        if($req->hasFile('fileProfile')){
+            $imageName = makeid::createId(10).".".$req->file('fileProfile')->extension();
+            $path = Storege::disk('public')->putFileAS('profile', $req->file('fileProfile'), $imageName);
+            $data_update['foto_profile'] = $path;
+            $req->session()->put([
+                'foto_profile' =>$path
+            ]);
+        }
+        $data_update['nama'] = $data['nama'];
+        $data_update['nohp'] = $data['nohp'];
+        $data_update['alamat'] = $data['alamat'];
+
+        $admin = tbadmin::find($data['idadmin'])->update($data_update);
+        if($admin){
+            return back()->with('message', 'Profile Berhasil Diupdate');
+        }
+        return back()->with('Profile Gagal Diupdate');
+    }
+
+    function profile_password_post(Request $req){
+        $user = tbuser::find($req->input('iduser'));
+        if(!Hash::check($req->input('oldPassword'), $user->password)){
+            return redirect()->route(admin.profile_admin)->with('message','Password Lama Salah');
+        }
+        $user->update([
+            'password'  =>Hash::make($req->input('newPassword'))
+        ]);
+
+        if($user){
+            return redirect()->route('admin.profile_admin')->with('message', 'Password Berhasil Diganti');
+        }
+        return redirect()->route('admin.profile_admin')->with('message', 'Password Gagal Diganti');
     }
 
 

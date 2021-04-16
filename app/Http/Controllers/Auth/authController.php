@@ -54,6 +54,7 @@ class authController extends Controller
             $data = $req->all();
             $iduser = makeid::createid(10);
             $idpemilik = makeid::createid(10);
+            // dd($req->all());
             tbuser::create([
                 'id_user'   =>$iduser,
                 'username'  =>$data['username'],

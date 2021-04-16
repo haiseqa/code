@@ -14,7 +14,7 @@ class CreateTbfotoVillaTable extends Migration
     public function up()
     {
         Schema::create('tbfoto_villa', function (Blueprint $table) {
-            $table->string('id_foto_villa')->primary();
+            $table->bigIncrements('id_foto_villa');
             $table->string('id_villa');
             $table->foreign('id_villa')->references('id_villa')->on('tbvilla')->onDelete('cascade');
             $table->string('path');

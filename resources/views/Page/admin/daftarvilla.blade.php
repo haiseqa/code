@@ -43,7 +43,7 @@
                     @else
                     <form action="{{route('admin.pemilik.status', ['enable'])}}" method="get">
                         <input type="text" name="id_villa" value="{{$item->id_villa}}" hidden>
-                        <button type="submit" id="btnEdit" class="btn btn-danger">Active</button>
+                        <button type="submit" id="btnEdit" class="btn btn-success">Active</button>
                     </form>
                     @endif
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\page;
 
+use App\Database\tbfoto_villa;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Database\tbuser;
@@ -54,7 +55,6 @@ class pemilik_controller extends Controller
 
     function tambah_vila_post(Request $req){
         $data = $req->all();
-        // dd($data);
         $pemilik = tbpemilik::where([
             'id_user'   => $req->session()->get('iduser')
         ])->first();
@@ -62,9 +62,10 @@ class pemilik_controller extends Controller
         if(empty($pemilik)){
             return back()->with('message', 'data pemilik tidak sesuai');
         }
+        $id_vila = makeid::createId(10);
 
         $villa = tbvilla::create([
-            'id_villa'      => makeid::createId(10),
+            'id_villa'      => $id_vila,
             'id_pemilik'    => $pemilik->id_pemilik,
             'nama_villa'    => $data['nama'],
             'alamat_villa'  => $data['alamat'],
@@ -75,6 +76,16 @@ class pemilik_controller extends Controller
             'status'        => $data['status']
         ]);
 
+        //upload gambar
+        for ($i=0; $i < sizeof($data['file']); $i++) {
+            $imageName = makeid::createId(10).".".$data['file'][$i]->extension();
+            $path = Storage::disk('public')->putFileAs('img_vila', $data['file'][$i], $imageName);
+            tbfoto_villa::create([
+                'id_villa'   => $id_vila,
+                'path'       => $path
+            ]);
+        }
+
 
         if($villa){
             tbuser::find($req->session()->get('iduser'))->update([
@@ -83,7 +94,7 @@ class pemilik_controller extends Controller
             $req->session()->put([
                 'status'    => 'enable'
             ]);
-            return redirect()->route('pemilik.registrasi_villa')->with('message', 'data villa berhasil ditambahkan');
+            return redirect()->route('pemilik')->with('message', 'data villa berhasil ditambahkan');
         }
         return back()->with('message', 'data villa gagal ditambahkan');
     }

@@ -9,7 +9,7 @@
                 <img src="{{ asset('dashboard/images/logo-icon.png') }}" alt="logo icon">
             </div>
             <div class="card-title text-uppercase text-center py-3">Sign In</div>
-            <form action="{{route('register')}}" method="POST">
+            <form action="{{route('register')}}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="exampleInputUsername" class="">Nama Lengkap</label>

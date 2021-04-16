@@ -54,6 +54,9 @@ Route::group(['middleware' => 'login'], function(){
         route::get('/pemilik/delete/{id_user}','page\admin_controller@deletepemilik')->name('admin.pemilik.delete');
         route::get('admin/daftarvilla', 'page\admin_controller@daftarvilla')->name('admin.daftarvilla');
         route::get('/pemilik/villa/status/{cmd}', 'page\admin_controller@change_status_villa')->name('admin.pemilik.status');
+        route::get('/profile_admin', 'page\admin_controller@profile_admin')->name('admin.profile_admin');
+        route::get('/profile_admin', 'page\admin_controller@profile_admin_post');
+        route::get('/profile_admin/password', 'page\admin_controller@profile_password_post')->name('admin.profile_profile.password');
 
     });
 

@@ -33,7 +33,7 @@
                 <td>{!!$item->deskripsi!!}</td>
                 <td>{{$item->longitude}}</td>
                 <td>{{$item->latitude}}</td>
-                <td>{{$item->status === 'enable' ? "Aktif" : "Tidak Aktif"}}</td>
+                <td>{{$item->status_villa === 'enable' ? "Aktif" : "Tidak Aktif"}}</td>
 
                 <td>
                     <form class="formdelete"
