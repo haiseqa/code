@@ -36,13 +36,11 @@
                 <td>{{$item->status_villa === 'enable' ? "Aktif" : "Tidak Aktif"}}</td>
 
                 <td>
-                    <form class="formdelete"
-                        action="#" method="GET">
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-
+                    <a href="{{route('pemilik.detail_villa', [$item->id_villa])}}" button type="submit" class="btn btn-primary">detail</button></a>
+                    <a href="{{route('pemilik_villa.galeri', [$item->id_villa])}}" button type="submit" class="btn btn-success">Gambar</button></a>
+                    <button type="submit" class="btn btn-danger">Delete</button>
                 </td>
+
             </tr>
 
             @endforeach

@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-body">
-    <div class="card-title text-primary">Vertical Form</div>
+    <div class="card-title text-primary">Edit Pemilik</div>
     <hr>
      <form method="POST">
          {{ csrf_field() }}

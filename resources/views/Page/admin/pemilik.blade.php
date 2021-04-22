@@ -29,9 +29,10 @@
 
                 <td>
                     <form class="formdelete"
-                        action="{{route('admin.pemilik.delete',[$item->id_user])}}" method="GET">
-                        <a href="{{route('admin.pemilik.edit', [$item->id_pemilik])}}" class="btn btn-primary">Edit</a>
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        action="{{route('admin.pemilik.delete',[$item->id_user])}}">
+                        <a href="{{route('admin.pemilik.edit', [$item->id_pemilik])}}"
+                            class="btn btn-primary">Edit</a>
+                        <button type="submit"  id="btnHapus" class="btn btn-danger">Delete</button>
                     </form>
 
                 </td>
@@ -46,11 +47,11 @@
   <script>
     $(document).ready(function() {
      //Default data table
-      $('#default-datatable').DataTable();
+    //   $('#default-datatable').DataTable();
 
-      $('.formdelete').on('click',function(event){
+      $('.#btnHapus').on('click',function(event){
           event.preventDefault();
-          let form = $(this);
+          let form = $(".formdelete");
           swal({
               title: "hapus?",
               text: "hapus pemilik villa",

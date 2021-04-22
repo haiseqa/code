@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Database\tbuser;
 use App\Database\tbpemilik;
+use App\Database\tbfoto_villa;
 use App\Database\tbvilla;
 use App\Utils\makeid;
 use Illuminate\Support\Facades\Hash;
@@ -124,5 +125,15 @@ class admin_controller extends Controller
         return redirect()->route('admin.profile_admin')->with('message', 'Password Gagal Diganti');
     }
 
+    function detail_villa(Request $req, $idvilla){
+        $villa = tbvilla::find($idvilla);
+        $image = tbfoto_villa::where([
+            'id_villa'  => $villa->id_villa
+        ])->get();
+        return view('Page.admin.detail_villa', [
+            'villa'     => $villa,
+            'image'     => $image
+        ]);
+    }
 
 }

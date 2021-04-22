@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class tbfasilitas_villa extends Model
 {
-    protected $tables = 'tbfasilitas_villa';
+    protected $table = 'tbfasilitas_villa';
     public $incrementing = false;
     protected $primaryKey = 'string';
     protected $keyType = 'string';

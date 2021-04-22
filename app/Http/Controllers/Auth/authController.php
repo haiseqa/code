@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Database\tbuser;
 use App\Database\tbpemilik;
+use App\Database\tbvilla;
 use App\Utils\makeid;
 use Hash;
 
@@ -34,6 +35,22 @@ class authController extends Controller
             'role'      => $user->role,
             'status'    => $user->status
         ]);
+
+        if($user->role === 'pemilik'){
+            $pemilik = tbpemilik::where([
+                'id_user'   => $user->id_user
+            ])->first();
+
+            $villa = tbvilla::where([
+                'id_pemilik'    => $pemilik->id_pemilik
+            ])->count();
+            $req->session()->put([
+                'villa'     => $villa > 0 ? true : false,
+                'idpemilik' => $pemilik->id_pemilik
+            ]);
+
+        }
+
         return back();
     }
 

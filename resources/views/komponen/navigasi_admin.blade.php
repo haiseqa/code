@@ -27,6 +27,12 @@
        </a>
       </li>
 
+      <li>
+        <a href="{{route('admin.fasilitas')}}" class="waves-effect">
+         <i class="zmdi zmdi-view-dashboard"></i> <span>Fasilitas</span>
+       </a>
+      </li>
+
    </ul>
 
   </div>

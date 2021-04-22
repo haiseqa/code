@@ -32,8 +32,26 @@
                                 <tr>
                                     <td style="width: 15%;">Harga</td>
                                     <td style="width: 1%;"> : </td>
-                                    <td><input type="text" id="harga" class="form-control" name="harga"
+                                    <td><input type="text" id="harga" class="form-control number" name="harga"
                                             placeholder="Harga Villa" required>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width: 15%;">Fasilitas</td>
+                                    <td style="width: 1%;"> : </td>
+                                    <td>
+
+                                        <div class="row">
+                                            @foreach ($fasilitas as $item)
+                                            <div class="col-xl-4">
+                                                <div class="icheck-material-primary">
+                                                    <input type="checkbox" name="fasilitas[]" value="{{$item->id_fasilitas}}" id="{{$item->id_fasilitas}}" />
+                                                    <label for="{{$item->id_fasilitas}}">{{$item->nama_fasilitas}}</label>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                        </div>
                                     </td>
                                 </tr>
 
@@ -126,6 +144,7 @@
                             <td><input type="number" id="harga_modal" class="form-control" name="harga">
                             </td>
                         </tr>
+
 
                         <tr>
                             <td style="width: 15%;">Status</td>

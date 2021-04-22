@@ -14,7 +14,7 @@ class CreateTbfasilitasVillaTable extends Migration
     public function up()
     {
         Schema::create('tbfasilitas_villa', function (Blueprint $table) {
-            $table->string('id_fasilitas_villa',10)->primary();
+            $table->bigIncrements('id_fasilitas_villa');
             $table->string('id_fasilitas',10);
             $table->string('id_villa',10);
             $table->foreign('id_fasilitas')->references('id_fasilitas')->on('tbfasilitas')->onDelete('cascade');

@@ -25,20 +25,24 @@
             <li><a href="index4.html"><i class="zmdi zmdi-star-outline"></i> Dashboard v4</a></li>
           </ul>
       </li>
-    <li>
 
-     {{-- <li>
-        <a href="{{route('pemilik.registrasi_villa')}}" class="waves-effect">
-          <i class="zmdi zmdi-view-dashboard"></i> <span>Registrasi Villa</span>
+      <li>
+        <a href="{{route('pemilik.detail_villa')}}" class="waves-effect">
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Data Villa</span>
         </a>
       </li>
-    <li> --}}
 
      <li>
       <a href="#" class="waves-effect">
         <i class="zmdi zmdi-view-dashboard"></i> <span>Booking</span>
       </a>
     </li>
+
+    {{-- <li>
+        <a href="{{route('pemilik.detail_villa')}}" class="waves-effect">
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Detail Villa</span>
+        </a>
+      </li> --}}
 
    </ul>
 

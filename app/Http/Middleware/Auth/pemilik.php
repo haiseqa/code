@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware\Auth;
 
+use App\Database\tbvilla;
 use Closure;
 use Session;
 
@@ -18,7 +19,7 @@ class pemilik
     {
         return Session::has('role')
         ? ((Session::get('role') === 'pemilik')
-        ? ((Session::get('status') === 'enable')
+        ? ((tbvilla::where('id_pemilik', '=', Session::get('idpemilik'))->count() > 0)
         ? $next($request)
         : redirect()->route('pemilik.vila.tambah'))
         : redirect()->route('home'))
