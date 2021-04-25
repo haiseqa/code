@@ -15,15 +15,15 @@ use App\Utils\authUser;
 */
 
 
-Route::group(['middleware' => 'notlogin'], function(){
+// Route::group(['middleware' => 'notlogin'], function(){
     Route::get('/login', 'Auth\authController@index')->name('login');
     Route::post('/login', 'Auth\authController@login_post');
     Route::get('/register', 'Auth\authController@register')->name('register');
     Route::post('/register', 'Auth\authController@register_post');
-});
+// });
 
-Route::group(['middleware' => 'login'], function(){
-    Route::get('/logout', 'Auth\authController@logout')->name('logout');
+// Route::group(['middleware' => 'login'], function(){
+//     Route::get('/logout', 'Auth\authController@logout')->name('logout');
 
     Route::get('/', function(){
         if(authUser::isadmin()){
@@ -33,10 +33,14 @@ Route::group(['middleware' => 'login'], function(){
             return redirect()->route('pemilik');
 
         }
-        elseif(authUser::iswisatawan()){
-
+        else{
+            return view('Page.Pengguna.home');
         }
+
     })->name('home');
+
+    Route::group(['middleware' => 'login'], function(){
+        Route::get('/logout', 'Auth\authController@logout')->name('logout');
 
     //Vila
     Route::get('/vila/tambah', 'page\pemilik_controller@tambah_vila')->name('pemilik.vila.tambah');

@@ -50,8 +50,9 @@ class authController extends Controller
             ]);
 
         }
+        return redirect()->route('home');
 
-        return back();
+        // return back();
     }
 
     function register(Request $req){
