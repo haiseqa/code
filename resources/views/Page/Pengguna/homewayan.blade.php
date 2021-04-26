@@ -32,7 +32,7 @@
                 </form>
             </div>
             <div class="card-body">
-                <!-- <ul class="nav nav-pills" role="tablist">
+                <ul class="nav nav-pills" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="pill" href="#piil-1"><i class="icon-home"></i> <span
                                 class="hidden-xs">Home</span></a>
@@ -41,44 +41,56 @@
                         <a class="nav-link" data-toggle="pill" href="#piil-2"><i class="icon-user"></i> <span
                                 class="hidden-xs">Profile</span></a>
                     </li>
-                </ul> -->
-
+                </ul>
                 {{-- Konten --}}
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div id="piil-1" class="container tab-pane active">
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour, or randomised words which don't look
+                            even slightly believable.</p>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                            embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the Internet
+                            tend to repeat predefined chunks as necessary, making this the first true generator on the
+                            Internet</p>
                         <div class="row">
-                            <div class="col-lg-8">
-                                <div id="carousel-2" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                          </div>
-                                          <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                          </a>
-                                          <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                          </a>
-                                    </div>
-                                </div>
+                            <div class="col-lg-4">
+                                <a href="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Tokyo-ShibuyaCrossing_666197917-1440x823-1.jpg"
+                                    data-fancybox="images" data-caption="This image has a caption">
+                                    <img src="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Tokyo-ShibuyaCrossing_666197917-1440x823-1.jpg"
+                                        alt="lightbox" class="lightbox-thumb img-thumbnail">
+                                </a>
                             </div>
                             <div class="col-lg-4">
-                                <span>Nama Villa</span>
-                                <br>
-                                <span>Rp 1000.000</span>
-                                <div class="text-medium fwb c-black lh18 ovh text-overflow" style="max-height: 36px;">Baldy Townhouse</div>
-
+                                <a href="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Tokyo-ShibuyaCrossing_666197917-1440x823-1.jpg"
+                                    data-fancybox="images" data-caption="This image has a caption">
+                                    <img src="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Tokyo-ShibuyaCrossing_666197917-1440x823-1.jpg"
+                                        alt="lightbox" class="lightbox-thumb img-thumbnail">
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Tokyo-ShibuyaCrossing_666197917-1440x823-1.jpg"
+                                    data-fancybox="images" data-caption="This image has a caption">
+                                    <img src="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Tokyo-ShibuyaCrossing_666197917-1440x823-1.jpg"
+                                        alt="lightbox" class="lightbox-thumb img-thumbnail">
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div id="piil-2" class="container tab-pane fade">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</p>
+                        <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
+                            structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
+                            therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                    </div>
+
+                    <div id="piil-3" class="container tab-pane fade">
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                            est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        </p>
                     </div>
                 </div>
             </div>

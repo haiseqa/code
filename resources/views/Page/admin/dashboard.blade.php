@@ -16,6 +16,57 @@ crossorigin=""/>
   }
 </style>
 
+<div class="row">
+    <div class="col-12 col-lg-6 col-xl-4">
+      <div class="card">
+        <div class="card-body">
+        <div class="media align-items-center">
+         <div class="media-body text-left">
+           <p class="mb-0">ORDERS</p>
+          <h4 class="text-primary">8052</h4>
+         </div>
+         <div id="widget-chart-1"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl-4">
+      <div class="card">
+        <div class="card-body">
+        <div class="media align-items-center">
+         <div class="media-body text-left">
+           <p class="mb-0">REVENUE</p>
+          <h4 class="text-success">$452</h4>
+         </div>
+         <div id="widget-chart-2"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl-4">
+      <div class="card">
+        <div class="card-body">
+        <div class="media align-items-center">
+         <div class="media-body text-left">
+           <p class="mb-0">EXPENSE</p>
+          <h4 class="text-secondary">8052</h4>
+         </div>
+         <div id="widget-chart-3"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div><!--End row-->
+
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header text-uppercase">Simple Basic Map</div>
+          <div class="card-body">
+            <div id="map" class="map"></div>
+          </div>
+      </div>
+  </div>
+
 <div id="map" class="map"></div>
 <script type="text/javascript">
     var CurrentPosition = "";

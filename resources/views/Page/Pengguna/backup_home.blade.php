@@ -26,7 +26,7 @@ crossorigin=""/>
                 {{-- {!!str_replace("&nbsp;", " ", $villa->nama_villa)!!} --}}
             </span>
         </h1>
-        <hr style=""": solid grey 0.1px;">
+        <hr style="": solid grey 0.1px;">
     </div>
 
     <div class="col-lg-6">

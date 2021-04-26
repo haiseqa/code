@@ -36,8 +36,8 @@
                     <div class="position-relative has-icon-right">
                         {{-- <input type="text" name="gender" id="exampleInputUsername" class="form-control input-shadow"> --}}
                         <select name="gender" id="" class="form-control input-shadow">
-                            <option value="0">Male</option>
-                            <option value="1">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                         </select>
                         <div class="form-control-position">
                             <i class="icon-user"></i>

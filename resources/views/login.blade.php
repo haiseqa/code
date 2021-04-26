@@ -2,8 +2,6 @@
 
 @section('konten')
 
-@endsection
-
 	<div class="card card-authentication1 mx-auto my-5">
 		<div class="card-body">
 		 <div class="card-content p-2">
@@ -44,4 +42,5 @@
 		    <p class="text-muted mb-0">Do not have an account? <a href="{{route('register')}}"> Sign Up here</a></p>
 		  </div>
 	     </div>
+@endsection
 
