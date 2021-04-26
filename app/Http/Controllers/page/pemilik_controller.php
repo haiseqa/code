@@ -16,8 +16,16 @@ use Illuminate\Support\Facades\Storage;
 
 class pemilik_controller extends Controller
 {
-    function dashboard(){
-        return view('Page.pemilik.dashboard');
+    function dashboard(Request $req){
+        $villa = tbvilla::join('tbpemilik', 'tbpemilik.id_pemilik', '=', 'tbvilla.id_pemilik')
+        ->select('tbvilla.*')
+        ->where([
+            'tbpemilik.id_user' => $req->session()->get('iduser')
+        ])->first();
+        return view('Page.pemilik.dashboard',[
+
+            'villa'     => $villa,
+        ]);
     }
 
     function daftarvilla(Request $req){

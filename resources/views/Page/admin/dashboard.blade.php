@@ -16,47 +16,64 @@ crossorigin=""/>
   }
 </style>
 
-<div class="row">
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card">
+<div class="row mt-3">
+    <div class="col-12 col-lg-6 col-xl-3">
+      <div class="card gradient-bloody">
         <div class="card-body">
-        <div class="media align-items-center">
-         <div class="media-body text-left">
-           <p class="mb-0">ORDERS</p>
-          <h4 class="text-primary">8052</h4>
-         </div>
-         <div id="widget-chart-1"></div>
+          <div class="media align-items-center">
+          <div class="media-body">
+            <p class="text-white">Total Orders</p>
+            <h4 class="text-white line-height-5">8450</h4>
+          </div>
+          <div class="w-circle-icon rounded-circle border border-white">
+            <i class="fa fa-cart-plus text-white"></i></div>
         </div>
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card">
+    <div class="col-12 col-lg-6 col-xl-3">
+      <div class="card gradient-scooter">
         <div class="card-body">
-        <div class="media align-items-center">
-         <div class="media-body text-left">
-           <p class="mb-0">REVENUE</p>
-          <h4 class="text-success">$452</h4>
-         </div>
-         <div id="widget-chart-2"></div>
+          <div class="media align-items-center">
+          <div class="media-body">
+            <p class="text-white">Total Revenue</p>
+            <h4 class="text-white line-height-5">$750</h4>
+          </div>
+          <div class="w-circle-icon rounded-circle border border-white">
+            <i class="fa fa-money text-white"></i></div>
         </div>
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card">
+    <div class="col-12 col-lg-6 col-xl-3">
+      <div class="card gradient-blooker">
         <div class="card-body">
-        <div class="media align-items-center">
-         <div class="media-body text-left">
-           <p class="mb-0">EXPENSE</p>
-          <h4 class="text-secondary">8052</h4>
-         </div>
-         <div id="widget-chart-3"></div>
+          <div class="media align-items-center">
+          <div class="media-body">
+            <p class="text-white">New Users</p>
+            <h4 class="text-white line-height-5">620</h4>
+          </div>
+          <div class="w-circle-icon rounded-circle border border-white">
+            <i class="fa fa-users text-white"></i></div>
         </div>
         </div>
       </div>
     </div>
-  </div><!--End row-->
+    <div class="col-12 col-lg-6 col-xl-3">
+      <div class="card gradient-ohhappiness">
+        <div class="card-body">
+          <div class="media align-items-center">
+          <div class="media-body">
+            <p class="text-white">Bounce Rate</p>
+            <h4 class="text-white line-height-5">12.80%</h4>
+          </div>
+          <div class="w-circle-icon rounded-circle border border-white">
+            <i class="fa fa-pie-chart text-white"></i></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div><!--End Row-->
 
   <div class="col-lg-12">
       <div class="card">
@@ -67,7 +84,7 @@ crossorigin=""/>
       </div>
   </div>
 
-<div id="map" class="map"></div>
+{{-- <div id="map" class="map"></div> --}}
 <script type="text/javascript">
     var CurrentPosition = "";
     var maps = "";

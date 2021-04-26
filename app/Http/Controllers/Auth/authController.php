@@ -97,6 +97,6 @@ class authController extends Controller
         }
         function logout(Request $req){
             $req->session()->flush();
-            return redirect()->route('login');
+            return redirect()->route('home');
         }
 }

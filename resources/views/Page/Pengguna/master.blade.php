@@ -140,17 +140,17 @@
 </nav>
 </header>
 <!--End topbar header-->
-<div style="margin-top: 100px; margin-left: 15px">
+<div style="margin-top: 100px; margin-left: 15px; margin-right: -8px">
     @section('content')
     @show
 </div>
 <div class="clearfix"></div>
 
-  <div class="content-wrapper">
+  {{-- <div class="content-wrapper">
 
     <!-- End container-fluid-->
 
-    </div><!--End content-wrapper-->
+    </div><!--End content-wrapper--> --}}
 
    <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
@@ -158,12 +158,12 @@
 
 	<!--Start footer-->
 	<footer class="footer">
-      <div class="container">
-        <div class="text-center">
-          Copyright © 2021 Desa Paraili
+        <div class="container">
+          <div class="text-center">
+            Copyright © 2018 Rukada Admin
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 	<!--End footer-->
 
   </div><!--End wrapper-->

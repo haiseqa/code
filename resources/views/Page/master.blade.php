@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Rukada - Responsive Bootstrap4  Admin Dashboard Template</title>
+  <title>Rukada Esport</title>
   <!--favicon-->
   <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
 
@@ -122,8 +122,7 @@
         <li class="dropdown-divider"></li>
         <a href="{{route('logout')}}">
             <li class="dropdown-item">
-
-                <i class="icon-power mr-2"></i> Logout</li>
+            <i class="icon-power mr-2"></i> Logout</li>
         </a>
       </ul>
     </li>
@@ -133,28 +132,24 @@
 <!--End topbar header-->
 
 <div class="clearfix"></div>
-
-  <div class="content-wrapper">
-    <div class="container-fluid">
-        @section('content')
-        @show
-    </div>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            @section('content')
+            @show
+        </div>
     <!-- End container-fluid-->
-
     </div><!--End content-wrapper-->
-
    <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
-
 	<!--Start footer-->
 	<footer class="footer">
-      <div class="container">
-        <div class="text-center">
-          Copyright © 2021 Desa Paraili
+        <div class="container">
+          <div class="text-center">
+            Copyright © 2018 Rukada Admin
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 	<!--End footer-->
 
   </div><!--End wrapper-->

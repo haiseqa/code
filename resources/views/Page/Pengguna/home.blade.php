@@ -25,58 +25,223 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Cari" />
                         <div class="input-group-append">
-                            <button type="button" style="cursor: pointer" class="input-group-text"><i
-                                    class="fa fa-search"></i></button>
+                            <button type="button" style="cursor: pointer" class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </button>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="card-body">
-                <!-- <ul class="nav nav-pills" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="pill" href="#piil-1"><i class="icon-home"></i> <span
-                                class="hidden-xs">Home</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#piil-2"><i class="icon-user"></i> <span
-                                class="hidden-xs">Profile</span></a>
-                    </li>
-                </ul> -->
-
-                {{-- Konten --}}
-                <!-- Tab panes -->
+            {{-- <div class="card-body">
                 <div class="tab-content">
                     <div id="piil-1" class="container tab-pane active">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div id="carousel-2" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                          </div>
-                                          <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                          </a>
-                                          <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                          </a>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div id="piil-1" class="container tab-pane active">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                            <div class="carousel-item active">
+                                                                <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
+                                                              </div>
+                                                              <div class="carousel-item">
+                                                                <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                              </div>
+                                                              <div class="carousel-item">
+                                                                <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                              </div>
+                                                              <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                              </a>
+                                                              <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                              </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <span>Nama Villa</span>
+                                                    <br>
+                                                    <span>Rp 1000.000</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <span>Nama Villa</span>
-                                <br>
-                                <span>Rp 1000.000</span>
-                                <div class="text-medium fwb c-black lh18 ovh text-overflow" style="max-height: 36px;">tod</div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
 
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div id="piil-1" class="container tab-pane active">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                  </a>
+                                                  <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span>Nama Villa</span>
+                                        <br>
+                                        <span>Rp 1000.000</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div id="piil-1" class="container tab-pane active">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="carousel-3" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <a class="carousel-control-prev" href="#carousel-3" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                  </a>
+                                                  <a class="carousel-control-next" href="#carousel-3" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span>Nama Villa</span>
+                                        <br>
+                                        <span>Rp 1000.000</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div id="piil-1" class="container tab-pane active">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                  </a>
+                                                  <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span>Nama Villa</span>
+                                        <br>
+                                        <span>Rp 1000.000</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div id="piil-1" class="container tab-pane active">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
+                                                  </div>
+                                                  <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                  </a>
+                                                  <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span>Nama Villa</span>
+                                        <br>
+                                        <span>Rp 1000.000</span>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -84,18 +249,18 @@
             </div>
         </div>
     </div>
+
     <div class="col-lg-7">
-        <div class="card-body">
-            <div class="card">
-                <div class="card-header">
-                    <h4>Maps</h4>
-                </div>
-                <div class="card-body">
-                    <div id="map" class="map"></div>
-                </div>
+        <div class="card">
+           {{-- <div class="card-header text-uppercase">Simple Basic Map</div> --}}
+            <div class="card-body">
+              <div id="map" class="map">
+
+              </div>
             </div>
         </div>
     </div>
+
 </div>
 <script type="text/javascript">
     var CurrentPosition = "";
