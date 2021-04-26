@@ -75,7 +75,7 @@
                                 <span>Nama Villa</span>
                                 <br>
                                 <span>Rp 1000.000</span>
-                                <div class="text-medium fwb c-black lh18 ovh text-overflow" style="max-height: 36px;">Baldy Townhouse</div>
+                                <div class="text-medium fwb c-black lh18 ovh text-overflow" style="max-height: 36px;">tod</div>
 
                             </div>
                         </div>
