@@ -48,9 +48,17 @@ class fasilitas_controller extends Controller
         ]);
 
         if($fasilitas){
-            return redirect()->route('admin.fasilitas')->with('message','data berhasil diedit');
+            return redirect()->route('admin.fasilitas')->with('message','Data berhasil disimpan');
         }
 
-        return back()->with('Profile Gagal Diedit');
+        return back()->with('message', 'Data gagal disimpan');
+    }
+
+    function delete_fasilitas($idfasilitas,Request $req){
+        $delete = tbfasilitas::find($idfasilitas)->delete();
+        if($delete){
+            return back()->with('message','Data Telah dihapus');
+        }
+        return back()->with('message','Data gagal dihapus');
     }
 }

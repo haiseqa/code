@@ -70,6 +70,7 @@ use App\Utils\authUser;
         route::post('/fasilitas', 'page\fasilitas_controller@tambah_fasilitas')->name('admin.tambah_fasilitas');
         route::get('/fasilitas/edit/{idfasilitas}', 'page\fasilitas_controller@edit_fasilitas')->name('admin.edit_fasilitas');
         route::post('/fasilitas/edit/{idfasilitas}', 'page\fasilitas_controller@postedit_fasilitas');
+        route::get('fasilitas/delete/{id_fasilitas}', 'page\fasilitas_controller@delete_fasilitas')->name('admin.fasilitas_delete');
 
     });
 

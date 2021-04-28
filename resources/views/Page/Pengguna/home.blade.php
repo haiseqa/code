@@ -21,14 +21,43 @@
     <div class="col-lg-5">
         <div class="card">
             <div class="card-header">
-                <form class="search-bar">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cari" />
-                        <div class="input-group-append">
-                            <button type="button" style="cursor: pointer" class="input-group-text">
-                                <i class="fa fa-search"></i>
-                            </button>
+                <form class="float-lg-end">
+                    <div class="row row-cols-lg-auto g-2">
+                        <div class="col-6">
+                            <div class="position-relative">
+                                <input type="text" class="form-control ps-5" placeholder="Search Product...">
+                                <span class="position-absolute top-50 product-show translate-middle-y">
+                                    <i class="search-bar"></i>
+                                </span>
+                            </div>
                         </div>
+                        {{-- <div class="col-6"> --}}
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-white">Sort By</button>
+                                <div class="btn-group" role="group">
+                                  <button id="btnGroupDrop1" type="button" class="btn btn-white dropdown-toggle dropdown-toggle-nocaret px-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bx bx-chevron-down"></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="margin: 0px;">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        {{-- </div> --}}
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-white">Sort By</button>
+                            <div class="btn-group" role="group">
+                              <button id="btnGroupDrop1" type="button" class="btn btn-white dropdown-toggle dropdown-toggle-nocaret px-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bx bx-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="margin: 0px;">
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
                     </div>
                 </form>
             </div>

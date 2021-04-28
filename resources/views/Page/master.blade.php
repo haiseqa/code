@@ -158,12 +158,12 @@
   <script src="{{ asset('Mix/js/user_footer.js')}}"></script>
     @if (Session::has('message'))
     <script>
-        alert_info('{{Session::get("message")}}')
+        alert_success('{{Session::get("message")}}')
     </script>
     @endif
     @if ($errors->any())
     <script>
-        alert_info("{{ $errors->first() }});
+        alert_success("{{ $errors->first() }});
     </script>
 
 

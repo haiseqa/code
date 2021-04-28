@@ -13,8 +13,9 @@
     </div>
 
     <div class="form-group">
-     <button type="submit" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> Edit</button>
-   </div>
+        <button type="button" class="btn btn-primary" onclick="window.history.back();">CANCEL</button>
+        <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> SAVE</button>
+    </div>
    </form>
   </div>
   @endsection

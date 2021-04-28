@@ -170,6 +170,8 @@
 
   <!-- Bootstrap core JavaScript-->
   <script src="{{ asset('Mix/js/user_footer.js')}}"></script>
+  <script src="{{asset('dashboard/plugins/alerts-boxes/js/sweetalert.min.js')}}"></script>
+  <script src="{{('dashboard/plugins/alerts-boxes/js/sweet-alert-script.js')}}"></script>
     @if (Session::has('message'))
     <script>
         alert_info('{{Session::get("message")}}')
@@ -177,16 +179,9 @@
     @endif
     @if ($errors->any())
     <script>
-        alert_info("{{ $errors->first() }});
+        alert_success("{{ $errors->first() }});
     </script>
-
-
-
     @endif
-
-
-
-
 
 </body>
 

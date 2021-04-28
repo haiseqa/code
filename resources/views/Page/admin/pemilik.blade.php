@@ -28,11 +28,11 @@
                 <td>{{$item->email}}</td>
 
                 <td>
-                    <form class="formdelete"
+                    <form id="form_{{$item->id_user}}" class="formdelete"
                         action="{{route('admin.pemilik.delete',[$item->id_user])}}">
                         <a href="{{route('admin.pemilik.edit', [$item->id_pemilik])}}"
                             class="btn btn-primary">Edit</a>
-                        <button type="submit"  id="btnHapus" class="btn btn-danger">Delete</button>
+                        <button type="button"  id="{{$item->id_user}}" class="btn btn-danger btndelete">Delete</button>
                     </form>
 
                 </td>
@@ -47,23 +47,30 @@
   <script>
     $(document).ready(function() {
      //Default data table
-    //   $('#default-datatable').DataTable();
+       $('#pemilik').DataTable();
 
-      $('.#btnHapus').on('click',function(event){
+       $('.btndelete').on('click',function(event){
           event.preventDefault();
-          let form = $(".formdelete");
+          let idform = this.id;
+          let form = $("#form_"+ idform);
           swal({
-              title: "hapus?",
-              text: "hapus pemilik villa",
+              title: "Are you sure?",
+              text: "Once deleted, you will not be able to recover this imaginary file!",
               icon: "warning",
               buttons:true,
               dangerMode:true
-          }).then((value)=>{
-              if (value) {
-                form.submit();
-              }
-          });
-      });
+          }).
+          then((value) => {
+                if (value) {
+                    // swal("Poof! Your imaginary file has been deleted!", {
+                    //     icon: "success",
+                    //   });
+                      form.submit();
+                    } else {
+                    //   swal("Your imaginary file is safe!");
+                    }
+                  });
+              });
 
 
 
