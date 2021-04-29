@@ -26,7 +26,7 @@
                         <input type="text" class="form-control" placeholder="Cari" />
                         <div class="input-group-append">
                             <button type="button" style="cursor: pointer" class="input-group-text"><i
-                                    class="fa fa-search"></i></button>
+                                class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </form>
