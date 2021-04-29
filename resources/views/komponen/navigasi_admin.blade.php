@@ -33,6 +33,12 @@
        </a>
       </li>
 
+      <li>
+        <a href="{{route('admin.lokasi_wisata')}}" class="waves-effect">
+         <i class="zmdi zmdi-view-dashboard"></i> <span>Lokasi Wisata</span>
+       </a>
+      </li>
+
    </ul>
 
   </div>

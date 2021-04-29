@@ -17,7 +17,7 @@ class CreateTblokasiWisataTable extends Migration
             $table->string('id_lokasi_wisata')->primary();
             $table->string('nama_wisata');
             $table->string('longitude');
-            $table->string('latidue');
+            $table->string('latitude');
             $table->timestamps();
         });
     }

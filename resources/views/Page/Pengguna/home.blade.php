@@ -27,303 +27,97 @@
                             <div class="position-relative">
                                 <input type="text" class="form-control ps-5" placeholder="Search Villa...">
                                 {{-- <span class="position-absolute top-50 product-show translate-middle-y"> --}}
-                                    {{-- <i class="search-bar"></i> --}}
+                                {{-- <i class="search-bar"></i> --}}
                                 </span>
                             </div>
                         </div>
                         {{-- <div class="col-6"> --}}
-                            <div class="btn-group m-1" role="group">
-                                <button type="button" class="btn btn-light  waves-effect waves-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Harga
-                                </button>
-                                <div class="dropdown-menu">
-                                  <a href="javaScript:void();" class="dropdown-item">Harga 1</a>
-                                  <a href="javaScript:void();" class="dropdown-item">Harga 2</a>
-                                  <a href="javaScript:void();" class="dropdown-item">Something else here</a>
-                                  <div class="dropdown-divider"></div>
-                                </div>
-                              </div>
                         {{-- </div> --}}
-                        <div class="btn-group m-1" role="group">
-                            <button type="button" class="btn btn-light  waves-effect waves-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Objek Wisata
-                            </button>
-                            <div class="dropdown-menu">
-                              <a href="javaScript:void();" class="dropdown-item">Objek Wisata 1</a>
-                              <a href="javaScript:void();" class="dropdown-item">Objek Wisata 2</a>
-                              <a href="javaScript:void();" class="dropdown-item">Objek Wisata 3</a>
-                              <a href="javaScript:void();" class="dropdown-item">Objek Wisata 4</a>
-                              <a href="javaScript:void();" class="dropdown-item">Objek Wisata 5</a>
-                              <a href="javaScript:void();" class="dropdown-item">Objek Wisata 6</a>
-                              <a href="javaScript:void();" class="dropdown-item">Something else here</a>
-                              <div class="dropdown-divider"></div>
-                            </div>
-                          </div>
-                          <button type="button" class="btn btn-light waves-effect waves-light m-1" data-toggle="modal" data-target="#formemodal">More</button>
+                        <button type="button" class="btn btn-light waves-effect waves-light m-1" data-toggle="modal"
+                            data-target="#filtermodal">All Filter</button>
                     </div>
                 </form>
             </div>
+            <div id="content_villa">
 
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="tab-content">
-                            <div id="piil-1" class="container tab-pane active">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div id="carousel-2" class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                  </a>
-                                                  <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <span>Nama Villa</span>
-                                        <br>
-                                        <span>Rp 1000.000</span>
-                                    </div>
-                                    <div class="col-lg-6">
-                                    <button type="button" class="btn btn-outline-info waves-effect waves-light m-1">View deal</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="tab-content">
-                            <div id="piil-1" class="container tab-pane active">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div id="carousel-3" class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <a class="carousel-control-prev" href="#carousel-3" role="button" data-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                  </a>
-                                                  <a class="carousel-control-next" href="#carousel-3" role="button" data-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <span>Nama Villa</span>
-                                        <br>
-                                        <span>Rp 1000.000</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Modal filter -->
+    <div class="modal fade" id="filtermodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Filter</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
-
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="tab-content">
-                            <div id="piil-1" class="container tab-pane active">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div id="carousel-2" class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                  </a>
-                                                  <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <span>Nama Villa</span>
-                                        <br>
-                                        <span>Rp 1000.000</span>
-
-                                    </div>
-                                </div>
+                <div class="modal-body">
+                    <form id="form_search">
+                        <div class="form-group">
+                            <label for="input-1">Sort By</label>
+                            <div class="btn-group m-1" role="group">
+                                <select id="filter_harga"
+                                    class="form-control input-shadow btn btn-inverse-dark waves-effect waves-light dropdown-toggle">
+                                    <option value="desc">Harga Tertinggi</option>
+                                    <option value="asc">Harga Terendah</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        <div class="form-group">
+                            <label for="input-3">Sort By</label>
+                            <div class="btn-group m-1" role="group">
+                                <select id="lokasiwisata"
+                                    class="form-control input-shadow btn btn-inverse-dark waves-effect waves-light dropdown-toggle">
+                                    <option value="all">Semua</option>
+                                    @foreach ($lokasiwisata as $item)
+                                    <option value="{{$item->id_lokasi_wisata}}">{{$item->nama_wisata}}</option>
+                                    @endforeach
+                                </select>
 
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="tab-content">
-                            <div id="piil-1" class="container tab-pane active">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div id="carousel-2" class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-4.jpg" alt="First slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img class="d-block w-100" src="dashboard/images/gallery/slider-5.jpg" alt="Second slide">
-                                                  </div>
-                                                  <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                  </a>
-                                                  <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <span>Nama Villa</span>
-                                        <br>
-                                        <span>Rp 1000.000</span>
-
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="input-2">Category</label>
+                            <div class="row">
+                                <script>
+                                    var kategori = [];
+
+                                </script>
+                                @foreach ($fasilitas as $item)
+                                <script>
+                                    kategori.push('{{$item->id_fasilitas}}');
+
+                                </script>
+                                <div class="col-md-6">
+                                    <div class="icheck-material-success">
+                                        <input type="checkbox" class="filter_categori" id="{{$item->id_fasilitas}}"
+                                            checked />
+                                        <label for="{{$item->id_fasilitas}}">{{$item->nama_fasilitas}}</label>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info shadow-info px-5"><i class="icon-lock"></i>
+                                Search</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="formemodal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Filter</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                   <div class="form-group">
-                    <div class="col-md-3">
-                        <div class="icheck-material-primary">
-                          <input type="checkbox" id="primary" checked/>
-                          <label for="primary">Primary</label>
-                        </div>
-                       </div>
-                       <div class="col-md-3">
-                        <div class="icheck-material-success">
-                          <input type="checkbox" id="success" checked/>
-                          <label for="success">Success</label>
-                        </div>
-                       </div>
-                       <div class="col-md-3">
-                        <div class="icheck-material-danger">
-                          <input type="checkbox" id="danger" checked/>
-                          <label for="danger">Danger</label>
-                        </div>
-                       </div>
-                       <div class="col-md-3">
-                        <div class="icheck-material-info">
-                          <input type="checkbox" id="info" checked/>
-                          <label for="info">Info</label>
-                        </div>
-                       </div>
-                       <div class="col-md-3">
-                        <div class="icheck-material-warning">
-                          <input type="checkbox" id="warning" checked/>
-                          <label for="warning">Warning</label>
-                        </div>
-                       </div>
-                       <div class="col-md-3">
-                        <div class="icheck-material-secondary">
-                          <input type="checkbox" id="secondary" checked/>
-                          <label for="secondary">Secondary</label>
-                        </div>
-                       </div>
-                       <div class="col-md-3">
-                        <div class="icheck-material-dark">
-                          <input type="checkbox" id="dark" checked/>
-                          <label for="dark">Dark</label>
-                        </div>
-                       </div>
-                    </div><!--End Row-->
-                     <label for="input-1">Name</label>
-                     <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
-                   </div>
-                   <div class="form-group">
-                     <label for="input-2">Email</label>
-                     <input type="text" class="form-control" id="input-2" placeholder="Enter Your Email Address">
-                   </div>
-                   <div class="form-group">
-                     <label for="input-3">Password</label>
-                     <input type="text" class="form-control" id="input-3" placeholder="Enter Password">
-                   </div>
-                   <div class="form-group">
-                     <div class="icheck-material-info">
-                     <input type="checkbox" id="user-checkbox1" checked="">
-                     <label for="user-checkbox1">Remember me</label>
-                    </div>
-                   </div>
-                   <div class="form-group">
-                    <button type="submit" class="btn btn-info shadow-info px-5"><i class="icon-lock"></i> Login</button>
-                  </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <div class="col-lg-7">
         <div class="card">
-           {{-- <div class="card-header text-uppercase">Simple Basic Map</div> --}}
+            {{-- <div class="card-header text-uppercase">Simple Basic Map</div> --}}
             <div class="card-body">
-              <div id="map" class="map">
+                <div id="map" class="map">
 
-              </div>
+                </div>
             </div>
         </div>
     </div>
@@ -332,59 +126,233 @@
 <script type="text/javascript">
     var CurrentPosition = "";
     var maps = "";
-    var zoom = 14;
+    var zoom = 11;
+    var data_villa;
+    var harga = 'asc';
+    var object_wisata = 'all';
+    var link_gambar = "{{asset('')}}";
+    var radius = "";
+    var data_wisata = "";
 
     $(document).ready(() => {
+        get_villa();
+        $(".filter_categori").change(function () {
+            // console.log(this.checked);
+            if (this.checked === true) {
+                kategori.push(this.id);
+            } else {
+                let removeItem = this.id;
+                kategori = $.grep(kategori, function (value) {
+                    return value !== removeItem;
+                });
+            }
+        });
+        $("#form_search").submit(function (event) {
+            event.preventDefault();
+            object_wisata = $("#lokasiwisata").val();
+            harga = $("#filter_harga").val();
+            get_villa();
+        });
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 CurrentPosition = {
                     long: position.coords.longitude,
                     lat: position.coords.latitude
                 };
-                drawMaps();
+                // drawMaps();
             });
         } else {
             alert("Browser Not Support");
         }
     });
 
+    function get_villa() {
+        $.ajax({
+            url: "{{route('api.get.villa')}}",
+            type: "GET",
+            data: {
+                "harga": harga,
+                "wisata": object_wisata,
+                "kategori": kategori
+            },
+            success: (data) => {
+                //success
+                console.log(data);
+                if (data.status === 1) {
+                    data_villa = data.data;
+                    data_wisata = data.wisata;
+                    refresMap()
+                    $("#filtermodal").modal('hide');
+                    // drawMaps();
+                } else {
+                    alert_info("Gagal Mengambil Data Villa");
+                }
+            },
+            error: (err) => {
+                //error
+                alert_error("Gagal Mengambil Data Villa");
+            }
+        });
+    }
+
+    function setData() {
+        let layout = "";
+        if (object_wisata === 'all') {
+            $.each(data_villa, function (index, value) {
+                L.marker([value.lat, value.long])
+                    .bindPopup(value.nama)
+                    .on('click', (e) => {
+                        console.log(e);
+                    })
+                    .addTo(maps);
+            });
+            $.each(data_villa, function (index, value) {
+                layout += `<div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div id="piil-1" class="container tab-pane active">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="C_${value.id_villa}" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                `;
+                $.each(value.gambar, function (index1, value1) {
+                    if (index1 === 0) {
+                        layout += `<div class="carousel-item active">
+                                                    <img class="d-block w-100" src="${link_gambar + value1.path}" alt="First slide">
+                                                  </div>`;
+                    } else {
+                        layout += `<div class="carousel-item">
+                                                    <img class="d-block w-100" src="${link_gambar + value1.path}" alt="First slide">
+                                                  </div>`;
+                    }
+                });
+                layout += `<a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                  </a>
+                                                  <a class="carousel-control-next" href="#C_${value.id_villa}" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span>${value.nama}</span>
+                                        <br>
+                                        <span>Rp ${value.harga.toLocaleString()}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" style="float: right;"  class="btn btn-outline-info waves-effect waves-light m-1">View deal</button>
+                    </div>
+                </div>
+            </div>`;
+            });
+            $("#content_villa").html(layout);
+        } else {
+            // maps.panTo(new L.LatLng(data_wisata.latitude, data_wisata.longitude), 15);
+            $.each(data_villa, function (index, value) {
+                console.log(data_wisata);
+                if(radius.getLatLng().distanceTo([value.lat, value.long]) < radius.getRadius()){
+                    L.marker([value.lat, value.long])
+                    .bindPopup(value.nama)
+                    .on('click', (e) => {
+                        console.log(e);
+                    })
+                    .addTo(maps);
+                layout += `<div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div id="piil-1" class="container tab-pane active">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="C_${value.id_villa}" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                `;
+                $.each(value.gambar, function (index1, value1) {
+                    if (index1 === 0) {
+                        layout += `<div class="carousel-item active">
+                                                    <img class="d-block w-100" src="${link_gambar + value1.path}" alt="First slide">
+                                                  </div>`;
+                    } else {
+                        layout += `<div class="carousel-item">
+                                                    <img class="d-block w-100" src="${link_gambar + value1.path}" alt="First slide">
+                                                  </div>`;
+                    }
+                });
+                layout += `<a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                  </a>
+                                                  <a class="carousel-control-next" href="#C_${value.id_villa}" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                  </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span>${value.nama}</span>
+                                        <br>
+                                        <span>Rp ${value.harga.toLocaleString()}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" style="float: right;"  class="btn btn-outline-info waves-effect waves-light m-1">View deal</button>
+                    </div>
+                </div>
+            </div>`;
+                }
+            });
+            $("#content_villa").html(layout);
+        }
+    }
+
     function drawMaps() {
-        maps = L.map('map').setView([CurrentPosition.lat, CurrentPosition.long], zoom);
+        if(object_wisata === 'all'){
+            maps = L.map('map').setView([CurrentPosition.lat, CurrentPosition.long], zoom);
+        }
+        else{
+            maps = L.map('map').setView([data_wisata.latitude, data_wisata.longitude], 13);
+        }
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Made With me',
-            maxZoom: 18,
+            // maxZoom: 12,
             id: 'mapbox/streets-v11',
             tileSize: 512,
             zoomOffset: -1,
             accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
         }).addTo(maps);
 
-        L.marker([CurrentPosition.lat, CurrentPosition.long])
-            .bindPopup("Lokasi Saya")
-            .on('click', (e) => {
-                console.log(e);
-            })
-            .addTo(maps);
-        L.circle([CurrentPosition.lat, CurrentPosition.long], {
+        if (object_wisata !== 'all') {
+            radius = L.circle([data_wisata.latitude, data_wisata.longitude], {
                 color: 'red',
                 fillColor: '#f03',
-                fillOpacity: 0.1,
+                fillOpacity: 0,
+                opacity: 0,
                 radius: 2000
-            })
-            .bindPopup(`<h1>asasasas</h1>
-<ul>
-    <li>asasdasd</li>
-    <li>asd</li>
-    <li>asdzf</li>
-    <li>werwyetwer</li>
-</ul>`)
-            .addTo(maps);
-        maps.on('click', (e) => {
-            L.popup()
-                .setLatLng(e.latlng)
-                .setContent("You clicked the map at " + e.latlng.toString())
-                .openOn(maps);
-        });
+            }).addTo(maps);
+        }
+
+        //set Data
+        setData();
+    }
+
+    function refresMap() {
+        if (maps) {
+            maps.eachLayer(function (layer) {
+                maps.remove();
+                drawMaps();
+            });
+        } else {
+            drawMaps();
+        }
     }
 
 </script>

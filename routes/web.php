@@ -1,5 +1,7 @@
 <?php
 
+use App\Database\tbfasilitas;
+use App\Database\tblokasi_wisata;
 use Illuminate\Support\Facades\Route;
 use App\Utils\authUser;
 
@@ -13,6 +15,9 @@ use App\Utils\authUser;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//API GET VILLA
+Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.villa');
 
 
 // Route::group(['middleware' => 'notlogin'], function(){
@@ -34,7 +39,12 @@ use App\Utils\authUser;
 
         }
         else{
-            return view('Page.Pengguna.home');
+            $fasilitas = tbfasilitas::get();
+            $lokasiwisata = tblokasi_wisata::get();
+            return view('Page.Pengguna.home', [
+                'fasilitas' => $fasilitas,
+                'lokasiwisata'  => $lokasiwisata
+            ]);
         }
 
     })->name('home');
@@ -71,6 +81,15 @@ use App\Utils\authUser;
         route::get('/fasilitas/edit/{idfasilitas}', 'page\fasilitas_controller@edit_fasilitas')->name('admin.edit_fasilitas');
         route::post('/fasilitas/edit/{idfasilitas}', 'page\fasilitas_controller@postedit_fasilitas');
         route::get('fasilitas/delete/{id_fasilitas}', 'page\fasilitas_controller@delete_fasilitas')->name('admin.fasilitas_delete');
+
+        //lokasi wisata
+
+        route::get('/lokasi_wisata', 'page\lokasiwisata_controller@lokasi_wisata')->name('admin.lokasi_wisata');
+        route::post('/lokasi_wisata', 'page\lokasiwisata_controller@tambah_lokasi_wisata')->name('admin.tambah.lokasi_wisata');
+        route::get('/lokasi_wisata/edit/{idlokasi_wisata}', 'page\lokasiwisata_controller@edit_lokasi_wisata')->name('admin.edit.lokasi_wisata');
+        route::post('/lokasi_wisata/edit/{idlokasi_wisata}','page\lokasiwisata_controller@editpost_lokasi_wisata');
+        route::get('/lokasi_wisata/delete/{idlokasi_wisata}', 'page\lokasiwisata_controller@delete_lokasi_wisata')->name('admin.delete.lokasi_wisata');
+
 
     });
 
