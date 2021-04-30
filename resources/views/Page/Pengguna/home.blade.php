@@ -253,6 +253,9 @@
                                     <div class="col-lg-6">
                                         <span>${value.nama}</span>
                                         <br>
+                                        <i class="zmdi zmdi-pin"></i>
+                                        <span>${value.alamat}</span>
+                                        <br>
                                         <span>Rp ${value.harga.toLocaleString()}</span>
                                     </div>
                                 </div>
@@ -309,6 +312,9 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <span>${value.nama}</span>
+                                        <br>
+                                        <i class="zmdi zmdi-pin"></i>
+                                        <span>${value.alamat}</span>
                                         <br>
                                         <span>Rp ${value.harga.toLocaleString()}</span>
                                     </div>

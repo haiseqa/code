@@ -21,11 +21,9 @@ crossorigin=""/>
 
 <div class="row">
     <div class="col-lg-12">
-        <h1>
             <span>
                 {!!str_replace("&nbsp;", " ", $villa->nama_villa)!!}
             </span>
-        </h1>
         <hr style="border: solid grey 1px;">
     </div>
     <div class="col-lg-6">

@@ -118,6 +118,14 @@ class pemilik_controller extends Controller
         return back()->with('message', 'data villa gagal ditambahkan');
     }
 
+    function delete_villa(Request $req, $id_villa){
+        $delete = tbvilla::find($id_villa)->delete();
+        if($delete){
+            return back()-> with('message', 'Villa Berhasil Dihapus');
+        }
+            return back()-> with('message', 'Villa Gagal Dihapus');
+        }
+
     function profile_pemilik(Request $req){
         $user = tbpemilik::join('tbuser', 'tbuser.id_user', '=', 'tbpemilik.id_user')
         ->select('tbpemilik.*', 'tbuser.username')

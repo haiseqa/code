@@ -57,6 +57,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
     Route::get('/vila/tambah', 'page\pemilik_controller@tambah_vila')->name('pemilik.vila.tambah');
     Route::post('/vila/tambah', 'page\pemilik_controller@tambah_vila_post');
     Route::post('/edit_villa', 'page\pemilik_controller@edit_villa_post')->name('pemilik.villa.edit');
+    Route::get('/pemilik/delete/{id_villa}', 'page\pemilik_controller@delete_villa')->name('pemilik.delete_villa');
 
     Route::group([
         'prefix'        => 'admin',
@@ -107,7 +108,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
         // Route::get('/tambah/{idfoto}', 'page\pemilik_controller@tambahgaleri')->name('pemilik.tambahgaleri');
         Route::post('/tambah/{idfoto}', 'page\pemilik_controller@tambahgaleri')->name('pemilik.tambahgaleri');
 
-        Route::get('/registrasi_villa', 'page\pemilik_controller@registrasi_villa')->name('pemilik.registrasi_villa');
+        // Route::get('/registrasi_villa', 'page\pemilik_controller@registrasi_villa')->name('pemilik.registrasi_villa');
         Route::get('/profile_pemilik', 'page\pemilik_controller@profile_pemilik')->name('pemilik.profile_pemilik');
         Route::post('/profile_pemilik', 'page\pemilik_controller@profile_pemilik_post');
         Route::post('/profile_pemilik/password', 'page\pemilik_controller@profile_password_post')->name('pemilik.profile_profile.password');

@@ -130,7 +130,6 @@
 </nav>
 </header>
 <!--End topbar header-->
-
 <div class="clearfix"></div>
     <div class="content-wrapper">
         <div class="container-fluid">

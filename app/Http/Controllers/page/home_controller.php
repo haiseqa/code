@@ -40,6 +40,7 @@ class home_controller extends Controller
                 'id_villa'  => $value->id_villa
             ])->exists()){
                 array_push($data_villa, [
+                    'alamat'    => $value->alamat_villa,
                     'harga'     => $value->harga_villa,
                     'nama'      => $value->nama_villa,
                     'lat'       => $value->latitude,

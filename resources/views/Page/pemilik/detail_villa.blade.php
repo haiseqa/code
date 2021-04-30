@@ -21,19 +21,21 @@ crossorigin=""/>
 
 <div class="row">
     <div class="col-lg-12">
-        <h1>
+        <h4>
             <span>
                 {!!str_replace("&nbsp;", " ", $villa->nama_villa)!!}
             </span>
-        </h1>
+        </h4>
         <hr style="border: solid grey 1px;">
     </div>
     <div class="col-lg-6">
+        <div class="card">
+            <br>
+        <i class="zmdi zmdi-pin"> {!!str_replace("&nbsp;", " ", $villa->alamat_villa)!!}</i>
+        <br>
+        <br>
         <span>
             {!!str_replace("&nbsp;", " ", $villa->deskripsi)!!}
-        </span>
-        <span>
-            {!!str_replace("&nbsp;", " ", $villa->alamat_villa)!!}
         </span>
         <span>
            Rp {{number_format($villa->harga_villa, 0, ',','.')}}
@@ -46,18 +48,26 @@ crossorigin=""/>
             <span class="badge badge-dark shadow-dark m-1">{{$item->nama_fasilitas}}</span>
             @endforeach
         </p>
+        </div>
     </div>
 
     <div class="col-lg-6">
         <div class="row">
             <div class="col-lg-12">
-                <div id="map" class="map"></div>
-                <br>
+                <div class="card">
+                    <div class="card-header text-uppercase">
+                        <a href="" button type="submit" class="btn btn-primary">Edit</button></a>
+                        <a href="" button type="submit" class="btn btn-success">Gambar</button></a>
+                    </div>
+                    <div class="card-body">
+                        <div id="map" class="map">
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="col-lg-12">
-
                 <div class="row">
-
                     <div class="col-12">
                         <div class="card">
                           <div class="card-header text-uppercase">Image Villa</div>
@@ -76,10 +86,8 @@ crossorigin=""/>
                           </div>
                         </div>
                       </div>
-
                   </div><!--End Row-->
                 </div>
-                <h1>sasa</h1>
             </div>
         </div>
     </div>
