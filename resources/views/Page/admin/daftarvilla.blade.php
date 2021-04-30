@@ -39,6 +39,8 @@
                     <form action="{{route('admin.pemilik.status', ['disable'])}}" method="get">
                         <input type="text" name="id_villa" value="{{$item->id_villa}}" hidden>
                         <button type="submit" id="btnEdit" class="btn btn-danger">Disable</button>
+                        <a href="{{route('admin.detail_villa', [$item->id_villa])}}" button type="submit" class="btn btn-primary">detail</button></a>
+                        <a href="{{route('pemilik_villa.galeri', [$item->id_villa])}}" button type="submit" class="btn btn-success">Gambar</button></a>
                     </form>
                     @else
                     <form action="{{route('admin.pemilik.status', ['enable'])}}" method="get">

@@ -21,22 +21,20 @@
     <div class="col-lg-5">
         <div class="card">
             <div class="card-header">
-                <form class="float-lg-end">
-                    <div class="row row-cols-lg-auto g-2 ">
-                        <div class="col-6">
-                            <div class="position-relative">
-                                <input type="text" class="form-control ps-5" placeholder="Search Villa...">
-                                {{-- <span class="position-absolute top-50 product-show translate-middle-y"> --}}
-                                {{-- <i class="search-bar"></i> --}}
-                                </span>
-                            </div>
+                <div class="row row-cols-lg-auto g-2 ">
+                    <div class="col-6">
+                        <div class="position-relative">
+                            <input type="text" class="form-control ps-5" id="filter_serach" placeholder="Search Villa...">
+                            {{-- <span class="position-absolute top-50 product-show translate-middle-y"> --}}
+                            {{-- <i class="search-bar"></i> --}}
+                            </span>
                         </div>
-                        {{-- <div class="col-6"> --}}
-                        {{-- </div> --}}
-                        <button type="button" class="btn btn-light waves-effect waves-light m-1" data-toggle="modal"
-                            data-target="#filtermodal">All Filter</button>
                     </div>
-                </form>
+                    {{-- <div class="col-6"> --}}
+                    {{-- </div> --}}
+                    <button type="button" class="btn btn-light waves-effect waves-light m-1" data-toggle="modal"
+                        data-target="#filtermodal">All Filter</button>
+                </div>
             </div>
             <div id="content_villa">
 
@@ -121,8 +119,8 @@
             </div>
         </div>
     </div>
-
 </div>
+
 <script type="text/javascript">
     var CurrentPosition = "";
     var maps = "";
@@ -131,8 +129,10 @@
     var harga = 'asc';
     var object_wisata = 'all';
     var link_gambar = "{{asset('')}}";
+    var link_detail ="{{asset('')}}";
     var radius = "";
     var data_wisata = "";
+    var search = 'all';
 
     $(document).ready(() => {
         get_villa();
@@ -145,6 +145,16 @@
                 kategori = $.grep(kategori, function (value) {
                     return value !== removeItem;
                 });
+            }
+        });
+        $("#filter_serach").change(function(event){
+            if(this.value.length > 0){
+                search = this.value;
+                get_villa();
+            }
+            else{
+                search = 'all';
+                get_villa();
             }
         });
         $("#form_search").submit(function (event) {
@@ -173,7 +183,8 @@
             data: {
                 "harga": harga,
                 "wisata": object_wisata,
-                "kategori": kategori
+                "kategori": kategori,
+                "search": search
             },
             success: (data) => {
                 //success
@@ -247,7 +258,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" style="float: right;"  class="btn btn-outline-info waves-effect waves-light m-1">View deal</button>
+                        <a href="${link_gambar + "detail_villa/" + value.id_villa}" style="float: right;"  class="btn btn-outline-info waves-effect waves-light m-1">View deal</a>
                     </div>
                 </div>
             </div>`;

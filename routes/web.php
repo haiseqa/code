@@ -48,6 +48,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
         }
 
     })->name('home');
+    route::get('/detail_villa/{id_villa}', 'page\home_controller@detail_villa')->name('home.detail_villa');
 
     Route::group(['middleware' => 'login'], function(){
         Route::get('/logout', 'Auth\authController@logout')->name('logout');
