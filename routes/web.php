@@ -56,6 +56,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
     //Vila
     Route::get('/vila/tambah', 'page\pemilik_controller@tambah_vila')->name('pemilik.vila.tambah');
     Route::post('/vila/tambah', 'page\pemilik_controller@tambah_vila_post');
+    Route::get('/edit_villa', 'page\pemilik_controller@edit_villa')->name('pemilik.edit_villa');
     Route::post('/edit_villa', 'page\pemilik_controller@edit_villa_post')->name('pemilik.villa.edit');
     Route::get('/pemilik/delete/{id_villa}', 'page\pemilik_controller@delete_villa')->name('pemilik.delete_villa');
 

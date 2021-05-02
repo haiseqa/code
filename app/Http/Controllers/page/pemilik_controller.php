@@ -56,13 +56,61 @@ class pemilik_controller extends Controller
         ]);
     }
 
-    function edit_villa_post(Request $req){
-        $villa = tbvilla::find($req->input('id_villa_modal'))->update($req->all());
-        if($villa){
-            return redirect()->route('pemilik.vila.tambah')->with('message', 'berhasil');
-        }
-        return redirect()->route('pemilik.vila.tambah')->with('message', 'gagal');
+    function edit_villa(Request $req){
+        $villa = tbvilla::where([
+            'id_pemilik' => $req->session()->get('idpemilik')
+        ])->first();
+
+        $fasilitas = tbfasilitas_villa::join('tbfasilitas', 'tbfasilitas.id_fasilitas', '=', 'tbfasilitas_villa.id_fasilitas')
+        ->where([
+            'tbfasilitas_villa.id_villa'    => $villa->id_villa
+        ])->get();
+
+        $fasilitas_data = tbfasilitas::whereNotIn('id_fasilitas', tbfasilitas_villa::where([
+            'id_villa'  => $villa->id_villa
+        ])->select('id_fasilitas')->get()->toArray())->get();
+
+        return view('Page.pemilik.edit_villa',[
+            'villa'             => $villa,
+            'fasilitas'        => $fasilitas,
+            'fasilitas_data'    => $fasilitas_data
+        ]);
     }
+
+    function edit_villa_post(Request $req){
+        // dd($req->all());
+        $data = $req->all();
+        $villa = tbvilla::where([
+            'id_pemilik'    => $req->session()->get('idpemilik')
+        ])->first();
+        $id_villa = $villa->id_villa;
+
+        $villa->update([
+            'nama_villa'        => $data['nama'],
+            'alamat_villa'      => $data['alamat'],
+            'harga_villa'       => $data['harga'],
+            'deskripsi '        => $data['deskripsi'],
+            'latitude'          => $data['latitude'],
+            'longitude'         => $data['longitude']
+        ]);
+
+        $del_fasilitas  = tbfasilitas_villa::where([
+            'id_villa'  => $id_villa
+        ])->delete();
+        foreach ($data['fasilitas'] as $key => $value){
+            tbfasilitas_villa::create([
+                'id_fasilitas'  => $value,
+                'id_villa'      => $id_villa
+            ]);
+        }
+        if($villa){
+            return redirect()->route('pemilik.detail_villa',[$id_villa])->with('message', 'berhasil');
+        }
+        return back()->with('message','gagal');
+
+    }
+
+
 
     function tambah_vila_post(Request $req){
         $data = $req->all();
@@ -202,7 +250,7 @@ class pemilik_controller extends Controller
             'fasilitas' => $fasilitas_pemilik
         ]);
     }
-
+//data Galery
     function galeri(Request $req, $idvilla){
         $image = tbfoto_villa::where([
             'id_villa'      =>$idvilla

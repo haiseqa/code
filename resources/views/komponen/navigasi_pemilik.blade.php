@@ -15,7 +15,7 @@
       </a>
     </li>
 
-    <li>
+    {{-- <li>
         <a href="{{route('pemilik.daftarvilla')}}" class="waves-effect">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Daftar Villa</span><i class="fa fa-angle-left pull-right"></i>
         </a>
@@ -24,7 +24,7 @@
             <li><a href="index3.html"><i class="zmdi zmdi-star-outline"></i> Dashboard v3</a></li>
             <li><a href="index4.html"><i class="zmdi zmdi-star-outline"></i> Dashboard v4</a></li>
           </ul>
-      </li>
+      </li> --}}
 
       <li>
         <a href="{{route('pemilik.detail_villa')}}" class="waves-effect">
