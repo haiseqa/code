@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\page;
 
+use App\Database\tbbooking;
 use App\Database\tbfasilitas;
 use App\Database\tbfasilitas_villa;
 use App\Database\tbfoto_villa;
@@ -11,6 +12,7 @@ use App\Database\tbuser;
 use App\Database\tbpemilik;
 use App\Database\tbvilla;
 use App\Utils\makeid;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -285,4 +287,45 @@ class pemilik_controller extends Controller
         }
         return back()-> with('message', 'Gambar Gagal Dihapus');
     }
+
+    function booking(Request $req){
+        // dd($req->all());
+        $user = tbuser::find($req->session()->get('iduser'));
+        $pemilik = tbpemilik::where([
+            'id_user'   => $user->id_user
+        ])->first();
+        $villa = tbvilla::where([
+            'id_pemilik'    => $pemilik->id_pemilik
+        ])
+        ->select('id_villa')
+        ->get()->toArray();
+        $booking = tbbooking::whereIn('id_villa', $villa)->get();
+        // dd($booking);
+        return view('Page.pemilik.daftar_booking',[
+            'boooking'   =>$booking
+        ]);
+    }
+
+    function booking_post(Request $req){
+        $data = $req->all();
+
+        $boooking = tbbooking::create([
+            'id_booking'            => makeid::createId(10),
+            'id_villa'              => $data['id_villa'],
+            'nama_booking'          => $data['nama'],
+            'Alamat'                => $data['alamat'],
+            'email'                 => $data['email'],
+            'nohp'                  => $data['nohp'],
+            'waktu_booking'         => Carbon::now()->format('Y-m-d'),
+            'status_booking'        => "0"
+        ]);
+        if($boooking){
+            return back()->with('message', 'Berhasil Booking');
+        }
+        return back()->with('message', 'Gagal Booking');
+    }
+
+    // function form_booking(Request $req){
+    //     return view('Page.Pengguna.form_booking');
+    // }
 }

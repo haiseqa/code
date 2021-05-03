@@ -33,7 +33,7 @@
       </li>
 
      <li>
-      <a href="#" class="waves-effect">
+      <a href="{{route('pemilik.booking')}}" class="waves-effect">
         <i class="zmdi zmdi-view-dashboard"></i> <span>Booking</span>
       </a>
     </li>

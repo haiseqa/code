@@ -78,6 +78,8 @@ crossorigin=""/>
                   <div class="form-group">
                     <button type="submit" class="btn btn-info shadow-info px-5" data-toggle="modal" data-target="#modalBooking" ><i class="icon-lock"></i>
                     Booking</button>
+                    {{-- <a href="{{route('form_booking')}}" type="button" class="btn btn-info shadow-info px-5" ><i class="icon-lock"></i>
+                        Booking</a> --}}
                 </div>
                 </div>
             </div>
@@ -87,36 +89,46 @@ crossorigin=""/>
 
 {{-- modal booking --}}
 <div class="modal fade" id="modalBooking">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Tambah Fasilitas</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="" method="post" enctype="multipart/form-data">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Form Booking</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="{{route('pemilik.booking_post')}}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <table style="width: 100%;">
                         <tr>
                             <td style="width: 15%;">Nama</td>
                             <td style="width: 1%;"> : </td>
-                            <td><input type="text" id="nama_modal" class="form-control" name="nama">
+                            <td>
+                                <input type="text" name="id_villa" value="{{$villa->id_villa}}" hidden>
+                                <input type="text" id="nama_modal" class="form-control" name="nama">
                             </td>
                         </tr>
 
                         <tr>
-                            <td style="width: 15%;">Nama</td>
+                            <td style="width: 15%;">Alamat</td>
                             <td style="width: 1%;"> : </td>
-                            <td><input type="text" id="nama_modal" class="form-control" name="nama">
+                            <td><input type="text" id="alamat_modal" class="form-control" name="alamat">
                             </td>
                         </tr>
 
                         <tr>
-                            <td style="width: 15%;">Nama</td>
+                            <td style="width: 15%;">Email</td>
                             <td style="width: 1%;"> : </td>
-                            <td><input type="text" id="nama_modal" class="form-control" name="nama">
+                            <td><input type="text" id="email_modal" class="form-control" name="email">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 15%;">No HP</td>
+                            <td style="width: 1%;"> : </td>
+                            <td><input type="text" id="nohp_modal" class="form-control" name="nohp">
                             </td>
                         </tr>
                     </table>
@@ -128,9 +140,9 @@ crossorigin=""/>
                 </div>
             </form>
         </div>
+      </div>
     </div>
-</div>
-
+  </div>
 </div>
 <script type="text/javascript">
     var CurrentPosition = "";

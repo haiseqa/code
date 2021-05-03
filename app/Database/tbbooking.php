@@ -12,7 +12,10 @@ class tbbooking extends Model
     protected $keyType = 'string';
     protected $fillable = [
         'id_booking',
-        'id_wisatawan',
+        'nama_booking',
+        'Alamat',
+        'email',
+        'nohp',
         'id_villa',
         'waktu_booking',
         'status_booking'

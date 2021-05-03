@@ -15,9 +15,13 @@ class CreateTbbookingTable extends Migration
     {
         Schema::create('tbbooking', function (Blueprint $table) {
             $table->string('id_booking',10)->primary();
-            $table->string('id_wisatawan',10);
+            // $table->string('id_wisatawan',10);
             $table->string('id_villa',10);
-            $table->foreign('id_wisatawan')->references('id_wisatawan')->on('tbwisatawan')->onDelete('cascade');
+            $table->string('nama_booking');
+            $table->string('Alamat');
+            $table->string('email')->unique();
+            $table->string('nohp',12);
+            // $table->foreign('id_wisatawan')->references('id_wisatawan')->on('tbwisatawan')->onDelete('cascade');
             $table->foreign('id_villa')->references('id_villa')->on('tbvilla');
             $table->datetime('waktu_booking');
             $table->string('status_booking');

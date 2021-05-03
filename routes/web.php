@@ -25,6 +25,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
     Route::post('/login', 'Auth\authController@login_post');
     Route::get('/register', 'Auth\authController@register')->name('register');
     Route::post('/register', 'Auth\authController@register_post');
+    // Route::get('/form_booking', 'Auth\authController@form_booking')->name('form_booking');
 // });
 
 // Route::group(['middleware' => 'login'], function(){
@@ -48,6 +49,9 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
         }
 
     })->name('home');
+
+    Route::get('/booking','page\pemilik_controller@booking')->name('pemilik.booking');
+    Route::post('/booking_post', 'page\pemilik_controller@booking_post')->name('pemilik.booking_post');
     route::get('/detail_villa/{id_villa}', 'page\home_controller@detail_villa')->name('home.detail_villa');
 
     Route::group(['middleware' => 'login'], function(){
@@ -59,6 +63,10 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
     Route::get('/edit_villa', 'page\pemilik_controller@edit_villa')->name('pemilik.edit_villa');
     Route::post('/edit_villa', 'page\pemilik_controller@edit_villa_post')->name('pemilik.villa.edit');
     Route::get('/pemilik/delete/{id_villa}', 'page\pemilik_controller@delete_villa')->name('pemilik.delete_villa');
+
+
+    // Route::post('/booking_post', 'page\pemilik_controller@booking_post')->name('pemilik.booking_post');
+    // Route::get('/form_booking', 'page\pemilik_controller@form_booking')->name('pemilik.form_booking');
 
     Route::group([
         'prefix'        => 'admin',
