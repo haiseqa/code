@@ -29,13 +29,13 @@
 
       <li>
         <a href="{{route('admin.fasilitas')}}" class="waves-effect">
-         <i class="zmdi zmdi-view-dashboard"></i> <span>Fasilitas</span>
+         <i class="zmdi zmdi-layers"></i> <span>Fasilitas</span>
        </a>
       </li>
 
       <li>
         <a href="{{route('admin.lokasi_wisata')}}" class="waves-effect">
-         <i class="zmdi zmdi-view-dashboard"></i> <span>Lokasi Wisata</span>
+         <i class="zmdi zmdi-local-library"></i> <span>Lokasi Wisata</span>
        </a>
       </li>
 

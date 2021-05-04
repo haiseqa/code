@@ -316,7 +316,7 @@ class pemilik_controller extends Controller
             'Alamat'                => $data['alamat'],
             'email'                 => $data['email'],
             'nohp'                  => $data['nohp'],
-            'waktu_booking'         => Carbon::now()->format('Y-m-d'),
+            'waktu_booking'         => $data['waktubooking'],
             'status_booking'        => "0"
         ]);
         if($boooking){

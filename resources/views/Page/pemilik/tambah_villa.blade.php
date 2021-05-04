@@ -25,7 +25,7 @@
                                     <td style="width: 15%;">Alamat</td>
                                     <td style="width: 1%;"> : </td>
                                     <td><input type="text" id="alamat" class="form-control" name="alamat"
-                                            placeholder="Alamat Villa" required>
+                                            placeholder="Alamat Villa" required readonly>
                                     </td>
                                 </tr>
 

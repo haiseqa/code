@@ -14,22 +14,21 @@
               <th scope="col">#</th>
               <th scope="col">Nama</th>
               <th scope="col">Alamat</th>
-              <th scope="col">Harga</th>
+              <th scope="col">Email</th>
+              <th scope="col">No HP</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
         <tbody>
-            {{-- @foreach ($villa as $item) --}}
+            @foreach ($boooking as $item)
 
             <tr>
                 <th scope="row"></th>
-                {{-- <td>{{$item->nama_villa}}</td>
-                <td>{{$item->alamat_villa}}</td>
-                <td>{{$item->harga_villa}}</td>
-                <td>{!!$item->deskripsi!!}</td>
-                <td>{{$item->longitude}}</td>
-                <td>{{$item->latitude}}</td>
-                <td>{{$item->status_villa === 'enable' ? "Aktif" : "Tidak Aktif"}}</td> --}}
+                <td>{{$item->nama_booking}}</td>
+                <td>{{$item->Alamat}}</td>
+                <td>{{$item->email}}</td>
+                <td>{{$item->nohp}}</td>
+                {{-- <td>{{$item->status_villa === 'enable' ? "Aktif" : "Tidak Aktif"}}</td> --}}
 
                 <td>
                     <form id="form_" class="formdelete"
@@ -42,7 +41,7 @@
 
             </tr>
 
-            {{-- @endforeach --}}
+            @endforeach
         </tbody>
 
     </table>

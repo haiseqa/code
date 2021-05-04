@@ -40,7 +40,7 @@
                             <option value="Female">Female</option>
                         </select>
                         <div class="form-control-position">
-                            <i class="icon-user"></i>
+                            <i class="zmdi zmdi-male-female"></i>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <input type="email" name="email" id="exampleInputNomorHp" class="form-control input-shadow"
                             placeholder="Enter Email">
                         <div class="form-control-position">
-                            <i class="icon-lock"></i>
+                            <i class="zmdi zmdi-email"></i>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         <input type="number" name="number" id="exampleInputNomorHp" class="form-control input-shadow"
                             placeholder="Enter Number Phone">
                         <div class="form-control-position">
-                            <i class="icon-lock"></i>
+                            <i class="zmdi zmdi-local-phone"></i>
                         </div>
                     </div>
                 </div>

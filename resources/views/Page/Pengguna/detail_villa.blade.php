@@ -1,5 +1,6 @@
 @extends('Page.Pengguna.master')
 @section('content')
+@include('komponen.datepicker')
 
 <link href="{{asset('dashboard/plugins/fancybox/css/jquery.fancybox.min.css')}}" rel="stylesheet" type="text/css"/>
 <script src="{{asset('dashboard/plugins/fancybox/js/jquery.fancybox.min.js')}}"></script>
@@ -131,6 +132,14 @@ crossorigin=""/>
                             <td><input type="text" id="nohp_modal" class="form-control" name="nohp">
                             </td>
                         </tr>
+
+                        <tr>
+                            <td style="width: 15%;">Waktu Booking</td>
+                            <td style="width: 1%;"> : </td>
+                            <td>
+                                <input type="text" id="date-time-picker" class="form-control" name="waktubooking">
+                            </td>
+                        </tr>
                     </table>
                 </div>
                 <div class="modal-footer">
@@ -198,5 +207,14 @@ crossorigin=""/>
     }
 </script>
 
+<script>
+$(function () {
+
+    // dat time picker
+    $('#date-time-picker').bootstrapMaterialDatePicker({
+        format: 'YYYY-MM-DD HH:mm'
+    });
+});
+</script>
 
 @endsection
