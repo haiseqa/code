@@ -9,11 +9,11 @@
          {{ csrf_field() }}
     <div class="form-group">
      <label for="input-1">Nama Wisata</label>
-     <input type="text" class="form-control" name="nama_wisata" value="{{$lokasiwisata->nama_wisata}}" id="input-1" placeholder="Enter Your Fasilitas ">
+     <input type="text" class="form-control" name="nama_wisata" value="{{$lokasiwisata->nama_wisata}}" id="input-1" placeholder="Enter Name Wisata ">
      <label for="input-1">Latitude</label>
-     <input type="text" class="form-control" name="latitude" value="{{$lokasiwisata->latitude}}" id="input-1" placeholder="Enter Your Fasilitas ">
+     <input type="text" class="form-control" name="latitude" value="{{$lokasiwisata->latitude}}" id="input-1" placeholder="Enter Longitude Wisata ">
      <label for="input-1">Longitude</label>
-     <input type="text" class="form-control" name="longitude" value="{{$lokasiwisata->longitude}}" id="input-1" placeholder="Enter Your Fasilitas ">
+     <input type="text" class="form-control" name="longitude" value="{{$lokasiwisata->longitude}}" id="input-1" placeholder="Enter Latitude ">
     </div>
 
     <div class="form-group">

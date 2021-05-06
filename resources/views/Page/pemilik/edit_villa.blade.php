@@ -143,8 +143,8 @@
     function getAddress(lat, long) {
         $.get(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${long}`, function (data) {
             $("#alamat").val(data.display_name);
-            $("#lat").val(lat);
-            $("#long").val(long);
+            $("#latitude").val(lat);
+            $("#longitude").val(long);
         });
     }
 

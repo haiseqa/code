@@ -11,7 +11,7 @@
     crossorigin=""></script>
 <style>
     .map {
-        height: 75vh;
+        height: 71vh;
         width: 100%;
         position: sticky !important;
     }
@@ -36,11 +36,29 @@
                         data-target="#filtermodal">All Filter</button>
                 </div>
             </div>
-            <div id="content_villa">
+            <div class="card-body">
+                <div id="content_villa" style="overflow: scroll;overflow-x: hidden;height: 71vh;">
 
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="col-lg-7">
+        <div class="card">
+            {{-- <div class="card-header text-uppercase">Simple Basic Map</div> --}}
+            <div class="card-header">
+                <h4>Maps</h4>
+            </div>
+            <div class="card-body">
+                <div id="map" class="map">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Modal filter -->
     <div class="modal fade" id="filtermodal">
@@ -108,18 +126,6 @@
             </div>
         </div>
     </div>
-
-    <div class="col-lg-7">
-        <div class="card">
-            {{-- <div class="card-header text-uppercase">Simple Basic Map</div> --}}
-            <div class="card-body">
-                <div id="map" class="map">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script type="text/javascript">
     var CurrentPosition = "";

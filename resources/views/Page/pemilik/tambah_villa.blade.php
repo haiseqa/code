@@ -8,7 +8,7 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Tambah Villa</h4>
+                        <h4>Edit Villa</h4>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="" enctype="multipart/form-data">
@@ -55,7 +55,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                {{-- <tr>
                                     <td style="width: 15%;">Status</td>
                                     <td style="width: 1%;"> : </td>
                                     <td><select name="status" id="status" class="form-control input-shadow" placeholder="Status Villa" required>
@@ -63,7 +63,7 @@
                                         <option value="not available">not available</option>
                                     </select>
                                     </td>
-                                </tr>
+                                </tr> --}}
 
                                 <tr>
                                     <td style="width: 15%">Select File</td>

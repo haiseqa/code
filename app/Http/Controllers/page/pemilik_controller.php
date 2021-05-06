@@ -91,7 +91,7 @@ class pemilik_controller extends Controller
             'nama_villa'        => $data['nama'],
             'alamat_villa'      => $data['alamat'],
             'harga_villa'       => $data['harga'],
-            'deskripsi '        => $data['deskripsi_villa'],
+            'deskripsi'        => $data['deskripsi_villa'],
             'latitude'          => $data['latitude'],
             'longitude'         => $data['longitude']
         ]);
@@ -111,7 +111,6 @@ class pemilik_controller extends Controller
         return back()->with('message','gagal');
 
     }
-
 
 
     function tambah_vila_post(Request $req){

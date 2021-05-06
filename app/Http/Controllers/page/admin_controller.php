@@ -136,4 +136,16 @@ class admin_controller extends Controller
         ]);
     }
 
+    //data Galery
+    function galeri(Request $req, $idvilla){
+        $image = tbfoto_villa::where([
+            'id_villa'      =>$idvilla
+        ])->get();
+        // dd($image);
+        return view('Page.admin.gambar',[
+            'image'     => $image,
+            'idvilla'   => $idvilla
+        ]);
+    }
+
 }

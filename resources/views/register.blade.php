@@ -76,16 +76,6 @@
                     </div>
                 </div>
 
-                {{-- <div class="form-group">
-                    <label for="exampleInputPassword" class="">Tanggal  Lahir</label>
-                    <div class="position-relative has-icon-right">
-                        <input type="datetime" name="tanggal_lahir" id="tanggal_lahir" class="form-control input-shadow"
-                            placeholder="Enter Tanggal Lahir">
-                        <div class="form-control-position">
-                            <i class="zmdi zmdi-local-phone"></i>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="form-group">
                     <label for="exampleInputPassword" class="">Password</label>
                     <div class="position-relative has-icon-right">

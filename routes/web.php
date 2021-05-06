@@ -84,6 +84,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
         route::get('admin/daftarvilla', 'page\admin_controller@daftarvilla')->name('admin.daftarvilla');
         route::get('/pemilik/villa/status/{cmd}', 'page\admin_controller@change_status_villa')->name('admin.pemilik.status');
         route::get('admin/detail_villa/{idvilla}', 'page\admin_controller@detail_villa')->name('admin.detail_villa');
+        route::get('admin/gambar/{idvilla}', 'page\admin_controller@galeri')->name('admin.galeri');
         // route::get('/profile_admin', 'page\admin_controller@profile_admin')->name('admin.profile_admin');
         // route::get('/profile_admin', 'page\admin_controller@profile_admin_post');
         // route::get('/profile_admin/password', 'page\admin_controller@profile_password_post')->name('admin.profile_profile.password');
