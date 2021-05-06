@@ -91,7 +91,7 @@ class pemilik_controller extends Controller
             'nama_villa'        => $data['nama'],
             'alamat_villa'      => $data['alamat'],
             'harga_villa'       => $data['harga'],
-            'deskripsi '        => $data['deskripsi'],
+            'deskripsi '        => $data['deskripsi_villa'],
             'latitude'          => $data['latitude'],
             'longitude'         => $data['longitude']
         ]);

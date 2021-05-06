@@ -257,20 +257,20 @@
         });
     }
 
-    function showDeskripsi(index){
-        let tmp_data = $.parseJSON(data_villa);
-        console.log(tmp_data[index]);
-        ck_edit.setData(tmp_data[index].deskripsi);
-        $("#nama_modal").val(tmp_data[index].nama_villa);
-        $("#alamat_modal").val(tmp_data[index].alamat_villa);
-        $("#harga_modal").val(tmp_data[index].harga_villa);
-        $("#status_modal").val(tmp_data[index].status);
-        $("#deskripsi_modal").html(tmp_data[index].deskripsi);
-        $("#lat_modal").val(tmp_data[index].latitude);
-        $("#long_modal").val(tmp_data[index].longitude);
-        $("#id_villa_modal").val(tmp_data[index].id_villa);
-        $("#modalDeskripsi").modal('show');
-    }
+    // function showDeskripsi(index){
+    //     let tmp_data = $.parseJSON(data_villa);
+    //     console.log(tmp_data[index]);
+    //     ck_edit.setData(tmp_data[index].deskripsi);
+    //     $("#nama_modal").val(tmp_data[index].nama_villa);
+    //     $("#alamat_modal").val(tmp_data[index].alamat_villa);
+    //     $("#harga_modal").val(tmp_data[index].harga_villa);
+    //     $("#status_modal").val(tmp_data[index].status);
+    //     $("#deskripsi_modal").html(tmp_data[index].deskripsi);
+    //     $("#lat_modal").val(tmp_data[index].latitude);
+    //     $("#long_modal").val(tmp_data[index].longitude);
+    //     $("#id_villa_modal").val(tmp_data[index].id_villa);
+    //     $("#modalDeskripsi").modal('show');
+    // }
 
 
 

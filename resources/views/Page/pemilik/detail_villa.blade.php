@@ -94,90 +94,6 @@ crossorigin=""/>
     </div>
 </div>
 
-
-  <!-- Modal Edit -->
-<div class="modal fade" id="modalEdit">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Detail villa</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="#" method="post">
-                {{ csrf_field() }}
-                <input type="text" name="id_villa" id="id_villa_modal" hidden>
-                <div class="modal-body">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td style="width: 15%;">Nama</td>
-                            <td style="width: 1%;"> : </td>
-                            <td><input type="text" id="nama_modal" class="form-control" name="nama" value="{{$villa->nama_villa}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">Alamat</td>
-                            <td style="width: 1%;"> : </td>
-                            <td><input type="text" id="alamat_modal" class="form-control" name="alamat" value="{{$villa->alamat_villa}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">Harga</td>
-                            <td style="width: 1%;"> : </td>
-                            <td><input type="number" id="harga_modal" class="form-control" name="harga" value="{{$villa->harga_villa}}">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="width: 15%;">Fasilitas</td>
-                            <td style="width: 1%;">  </td>
-                            <td>
-                                <div class="row">
-                                    @foreach ($fasilitas as $item)
-                                    <div class="col-xl-5">
-                                        <div class="icheck-material-primary">
-                                            <input type="checkbox" name="fasilitas[]" value="{{$item->id_fasilitas}}" id="{{$item->id_fasilitas}}" />
-                                            <label for="{{$item->id_fasilitas}}">{{$item->nama_fasilitas}}</label>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </td>
-                        </tr>
-                            <td style="width: 15%;">About Villa</td>
-                            <td style="width: 1%;"> : </td>
-                            <td><textarea name="deskripsi" class="form-control" id="deskripsi_modal">{{$villa->deskripsi}}</textarea>
-                            </td>
-                        </tr>
-                        </tr>
-
-                        <tr>
-                            <td style="width: 15%;">Latitude</td>
-                            <td style="width: 1%;"> : </td>
-                            <td><input type="text" id="lat_modal" class="form-control" name="latitude" value="{{$villa->latitude}}"
-                                    placeholder="Latitude" required readonly>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">Longitude</td>
-                            <td style="width: 1%;"> : </td>
-                            <td><input type="text" id="long_modal" class="form-control" name="longitude" value="{{$villa->longitude}}"
-                                    placeholder="Longitude" required readonly>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-inverse-primary" data-dismiss="modal"><i class="fa fa-times"></i>
-                        Close</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Save changes</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-</div>
 <script type="text/javascript">
     var CurrentPosition = "";
     var maps = "";
@@ -230,21 +146,8 @@ crossorigin=""/>
                 .openOn(maps);
         });
     }
-
-    function showEdit(index){
-        let tmp_data = $.parseJSON(data_villa);
-        console.log(tmp_data[index]);
-        ck_edit.setData(tmp_data[index].deskripsi);
-        $("#nama_modal").val(tmp_data[index].nama_villa);
-        $("#alamat_modal").val(tmp_data[index].alamat_villa);
-        $("#harga_modal").val(tmp_data[index].harga_villa);
-        $("#deskripsi_modal").html(tmp_data[index].deskripsi);
-        $("#lat_modal").val(tmp_data[index].latitude);
-        $("#long_modal").val(tmp_data[index].longitude);
-        $("#id_villa_modal").val(tmp_data[index].id_villa);
-        $("#modalEdit").modal('show');
-    }
 </script>
+
 
 
 @endsection

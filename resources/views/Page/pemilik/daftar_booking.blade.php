@@ -16,6 +16,8 @@
               <th scope="col">Alamat</th>
               <th scope="col">Email</th>
               <th scope="col">No HP</th>
+              <th scope="col">Waktu Booking</th>
+              <th scope="col">Status Booking</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -28,6 +30,8 @@
                 <td>{{$item->Alamat}}</td>
                 <td>{{$item->email}}</td>
                 <td>{{$item->nohp}}</td>
+                <td>{{$item->waktu_booking}}</td>
+                <td>{{$item->status_booking}}</td>
                 {{-- <td>{{$item->status_villa === 'enable' ? "Aktif" : "Tidak Aktif"}}</td> --}}
 
                 <td>

@@ -59,7 +59,7 @@
                                 </tr>
                                     <td style="width: 15%;">About Villa</td>
                                     <td style="width: 1%;"> : </td>
-                                    <td><textarea name="deskripsi" class="form-control" id="deskripsi">{{$villa->deskripsi}}</textarea>
+                                    <td><textarea name="deskripsi_villa" class="form-control" id="deskripsi">{{$villa->deskripsi}}</textarea>
                                     </td>
                                 </tr>
                                 </tr>
@@ -81,7 +81,7 @@
                                 <tr>
                                     <td colspan="3">
                                         <button style="float: right;" type="submit"
-                                            class="btn btn-primary">Tambah</button>
+                                            class="btn btn-primary">Edit</button>
                                     </td>
                                 </tr>
                             </table>
@@ -102,37 +102,29 @@
     var maps = "";
     var circle = "";
     var zoom = 14;
-    var user_marker ="";
+    var user_marker = "";
+    var ck_edit = "";
 
     $(document).ready(() => {
-        // console.log(data_villa);
-        ckeditor = CKEDITOR.replace('deskripsi');
         CurrentPosition = {
-            long: "{{$villa->longitude}}",
-            lat: "{{$villa->latitude}}"
-        };
-        drawMaps();
-
-        $("#btnCari").click(function () {
-            let keyword = $("#addr").val();
-            $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + keyword,
-                function (data) {
-                    console.log(data);
-                });
-        });
+                    long: "{{$villa->longitude}}",
+                    lat: "{{$villa->latitude}}"
+                };
+                drawMaps();
+                ckeditor = CKEDITOR.replace('deskripsi');
     });
-
     function drawMaps() {
         //nominatim
-        // console.log(CurrentPosition);
         maps = L.map('map').setView([CurrentPosition.lat, CurrentPosition.long], zoom);
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Made With :hearts: By Wayan Setiawan'
+            attribution: 'Made With Me'
         }).addTo(maps);
         L.marker([CurrentPosition.lat, CurrentPosition.long])
-            .on('click',(e) =>{
-            })
-            .addTo(maps);
+                .on('click', (e) => {
+
+                })
+                .addTo(maps);
+
 
         maps.on('click', (e) => {
             console.log(e);
@@ -142,32 +134,14 @@
             }
             else{
                 user_marker = L.marker([e.latlng.lat, e.latlng.lng])
-                .bindPopup("Mark saya")
+                .bindPopup("Mark Saya")
                 .addTo(maps);
             }
         });
     }
 
-    // function showDeskripsi(index){
-    //     let tmp_data = $.parseJSON(data_villa);
-    //     console.log(tmp_data[index]);
-    //     ck_edit.setData(tmp_data[index].deskripsi);
-    //     $("#nama_modal").val(tmp_data[index].nama_villa);
-    //     $("#alamat_modal").val(tmp_data[index].alamat_villa);
-    //     $("#harga_modal").val(tmp_data[index].harga_villa);
-    //     $("#status_modal").val(tmp_data[index].status);
-    //     $("#deskripsi_modal").html(tmp_data[index].deskripsi);
-    //     $("#lat_modal").val(tmp_data[index].latitude);
-    //     $("#long_modal").val(tmp_data[index].longitude);
-    //     $("#id_villa_modal").val(tmp_data[index].id_villa);
-    //     $("#modalDeskripsi").modal('show');
-    // }
-
-
-
     function getAddress(lat, long) {
         $.get(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${long}`, function (data) {
-            console.log(data);
             $("#alamat").val(data.display_name);
             $("#lat").val(lat);
             $("#long").val(long);

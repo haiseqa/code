@@ -90,7 +90,7 @@ class authController extends Controller
                 'nohp'          =>$data['number']
             ]);
             if($pemilik){
-                return redirect()->route('login')->with('message','sudah didaftar');
+                return redirect()->route('login')->with('message','Berhasil di daftarkan');
             }
             return back()->with('message','masih berfikir');
 
