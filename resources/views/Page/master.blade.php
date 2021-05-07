@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Rukada Esport</title>
+  <title>Project Tugas Akhir</title>
   <!--favicon-->
-  <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ asset('assets/images/favicon1.ico') }}" type="image/x-icon">
 
   {{-- Css --}}
   <link href="{{ asset('Mix/css/user.css') }}" rel="stylesheet" type="text/css">
@@ -105,13 +105,13 @@
   <ul class="navbar-nav align-items-center right-nav-link">
     <li class="nav-item">
       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
-        <span class="user-profile"><img src="{{ !Session::has('foto_profile') ? asset('dashboard/images/avatars/avatar-13.png') : asset(Session::get('foto_profile')) }}" class="img-circle" alt="user avatar"></span>
+        <span class="user-profile"><img src="{{ !Session::has('foto_profile') ? asset('dashboard/images/user.png') : asset(Session::get('foto_profile')) }}" class="img-circle" alt="user avatar"></span>
       </a>
       <ul class="dropdown-menu dropdown-menu-right">
        <li class="dropdown-item user-details">
         <a href="{{route('pemilik.profile_pemilik')}}">
            <div class="media">
-             <div class="avatar"><img class="align-self-start mr-3" src="{{ !Session::has('foto_profile') ? asset('dashboard/images/avatars/avatar-13.png') : asset(Session::get('foto_profile')) }}" alt="user avatar"></div>
+             <div class="avatar"><img class="align-self-start mr-3" src="{{ !Session::has('foto_profile') ? asset('dashboard/images/user.png') : asset(Session::get('foto_profile')) }}" alt="user avatar"></div>
             <div class="media-body">
             <h6 class="mt-2 user-title">{{Session::has('nama') ? Session::get('nama') : "Administrator"}}</h6>
             <p class="user-subtitle">{{Session::has('email') ? Session::get('email') : "Administrator@admin.com"}}</p>
@@ -162,7 +162,7 @@
     @endif
     @if ($errors->any())
     <script>
-        alert_success("{{ $errors->first() }});
+        alert_error("{{ $errors->first() }});
     </script>
 
 

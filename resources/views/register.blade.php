@@ -6,7 +6,7 @@
     <div class="card-body">
         <div class="card-content p-2">
             <div class="text-center">
-                <img src="{{ asset('dashboard/images/logo-icon.png') }}" alt="logo icon">
+                <img src="{{ asset('dashboard/images/logo1-icon.png') }}" alt="logo icon">
             </div>
             <div class="card-title text-uppercase text-center py-3">Sign In</div>
             <form action="{{route('register')}}" method="POST" enctype="multipart/form-data">
@@ -51,7 +51,7 @@
                         <input type="text" name="address" id="exampleInputAlamat" class="form-control input-shadow"
                             placeholder="Enter Address">
                         <div class="form-control-position">
-                            <i class="icon-lock"></i>
+                            <i class="fa fa-location-arrow"></i>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
         </div>
     </div>
     <div class="card-footer text-center py-3">
-        <p class="text-muted mb-0">Sudah Punya Akun? <a href="{{route('login')}}"> Login</a></p>
+        <p class="text-muted mb-0">Have an Account? <a href="{{route('login')}}"> Login</a></p>
     </div>
 </div>
 <script>

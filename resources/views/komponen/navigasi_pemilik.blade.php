@@ -28,13 +28,13 @@
 
       <li>
         <a href="{{route('pemilik.detail_villa')}}" class="waves-effect">
-          <i class="zmdi zmdi-view-dashboard"></i> <span>Data Villa</span>
+          <i class="zmdi zmdi-hotel"></i> <span>Data Villa</span>
         </a>
       </li>
 
      <li>
       <a href="{{route('pemilik.booking')}}" class="waves-effect">
-        <i class="zmdi zmdi-view-dashboard"></i> <span>Booking</span>
+        <i class="fa fa-shopping-cart"></i> <span>Booking</span>
       </a>
     </li>
 

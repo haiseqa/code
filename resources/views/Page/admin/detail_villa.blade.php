@@ -38,6 +38,14 @@ crossorigin=""/>
         <span>
             Rp {{number_format($villa->harga_villa, 0, ',','.')}}
         </span>
+        <p>
+            Fasilitas :
+        </p>
+        <p>
+            @foreach ($fasilitas as $item)
+            <span class="badge badge-dark shadow-dark m-1">{{$item->nama_fasilitas}}</span>
+            @endforeach
+        </p>
     </div>
 
     <div class="col-lg-6">
@@ -68,10 +76,8 @@ crossorigin=""/>
                           </div>
                         </div>
                       </div>
-
                   </div><!--End Row-->
                 </div>
-                <h1>sasa</h1>
             </div>
         </div>
     </div>

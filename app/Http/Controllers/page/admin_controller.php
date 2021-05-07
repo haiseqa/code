@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Database\tbuser;
 use App\Database\tbpemilik;
 use App\Database\tbfoto_villa;
+use App\Database\tbfasilitas_villa;
+use App\Database\tbfasilitas;
 use App\Database\tbvilla;
 use App\Utils\makeid;
 use Illuminate\Support\Facades\Hash;
@@ -130,9 +132,18 @@ class admin_controller extends Controller
         $image = tbfoto_villa::where([
             'id_villa'  => $villa->id_villa
         ])->get();
+
+        $fasilitas_pemilik = tbfasilitas_villa::
+        join('tbfasilitas', 'tbfasilitas.id_fasilitas', '=', 'tbfasilitas_villa.id_fasilitas')
+        ->select('tbfasilitas.nama_fasilitas')
+        ->where([
+            'id_villa'  => $villa->id_villa
+        ])->get();
+
         return view('Page.admin.detail_villa', [
             'villa'     => $villa,
-            'image'     => $image
+            'image'     => $image,
+            'fasilitas' => $fasilitas_pemilik
         ]);
     }
 

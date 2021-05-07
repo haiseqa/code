@@ -194,7 +194,7 @@
             },
             success: (data) => {
                 //success
-                console.log(data);
+                // console.log(data);
                 if (data.status === 1) {
                     data_villa = data.data;
                     data_wisata = data.wisata;

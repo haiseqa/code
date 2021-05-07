@@ -22,7 +22,7 @@ crossorigin=""/>
         <div class="card-body">
           <div class="media align-items-center">
           <div class="media-body">
-            <p class="text-white">Total Orders</p>
+            <p class="text-white">Jumlah Villa</p>
             <h4 class="text-white line-height-5">8450</h4>
           </div>
           <div class="w-circle-icon rounded-circle border border-white">
@@ -31,6 +31,22 @@ crossorigin=""/>
         </div>
       </div>
     </div>
+
+    <div class="col-12 col-lg-6 col-xl-3">
+        <div class="card gradient-blooker">
+          <div class="card-body">
+            <div class="media align-items-center">
+            <div class="media-body">
+              <p class="text-white">Jumlah Pemilik</p>
+              <h4 class="text-white line-height-5">620</h4>
+            </div>
+            <div class="w-circle-icon rounded-circle border border-white">
+              <i class="fa fa-users text-white"></i></div>
+          </div>
+          </div>
+        </div>
+      </div>
+
     <div class="col-12 col-lg-6 col-xl-3">
       <div class="card gradient-scooter">
         <div class="card-body">
@@ -45,20 +61,7 @@ crossorigin=""/>
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-6 col-xl-3">
-      <div class="card gradient-blooker">
-        <div class="card-body">
-          <div class="media align-items-center">
-          <div class="media-body">
-            <p class="text-white">New Users</p>
-            <h4 class="text-white line-height-5">620</h4>
-          </div>
-          <div class="w-circle-icon rounded-circle border border-white">
-            <i class="fa fa-users text-white"></i></div>
-        </div>
-        </div>
-      </div>
-    </div>
+
     <div class="col-12 col-lg-6 col-xl-3">
       <div class="card gradient-ohhappiness">
         <div class="card-body">
@@ -75,9 +78,11 @@ crossorigin=""/>
     </div>
   </div><!--End Row-->
 
+
+
   <div class="col-lg-12">
       <div class="card">
-          <div class="card-header text-uppercase">Simple Basic Map</div>
+          <div class="card-header text-uppercase">Maps</div>
           <div class="card-body">
             <div id="map" class="map"></div>
           </div>

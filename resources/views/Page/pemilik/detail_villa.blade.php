@@ -29,7 +29,6 @@ crossorigin=""/>
         <hr style="border: solid grey 1px;">
     </div>
     <div class="col-lg-6">
-        <div class="card">
             <br>
         <i class="zmdi zmdi-pin"> {!!str_replace("&nbsp;", " ", $villa->alamat_villa)!!}</i>
         <br>
@@ -48,7 +47,6 @@ crossorigin=""/>
             <span class="badge badge-dark shadow-dark m-1">{{$item->nama_fasilitas}}</span>
             @endforeach
         </p>
-        </div>
     </div>
 
     <div class="col-lg-6">
