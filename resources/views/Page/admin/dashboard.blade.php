@@ -22,8 +22,8 @@ crossorigin=""/>
         <div class="card-body">
           <div class="media align-items-center">
           <div class="media-body">
-            <p class="text-white">Jumlah Villa</p>
-            <h4 class="text-white line-height-5">8450</h4>
+            <p class="text-white">Total Villa</p>
+            <h4 class="text-white line-height-5">{{$villa}}</h4>
           </div>
           <div class="w-circle-icon rounded-circle border border-white">
             <i class="fa fa-cart-plus text-white"></i></div>
@@ -37,8 +37,8 @@ crossorigin=""/>
           <div class="card-body">
             <div class="media align-items-center">
             <div class="media-body">
-              <p class="text-white">Jumlah Pemilik</p>
-              <h4 class="text-white line-height-5">620</h4>
+              <p class="text-white">Total Pemilik</p>
+              <h4 class="text-white line-height-5">{{($pemilik)}}</h4>
             </div>
             <div class="w-circle-icon rounded-circle border border-white">
               <i class="fa fa-users text-white"></i></div>
@@ -52,8 +52,8 @@ crossorigin=""/>
         <div class="card-body">
           <div class="media align-items-center">
           <div class="media-body">
-            <p class="text-white">Total Revenue</p>
-            <h4 class="text-white line-height-5">$750</h4>
+            <p class="text-white">Total Fasilitas</p>
+            <h4 class="text-white line-height-5">{{($fasilitas)}}</h4>
           </div>
           <div class="w-circle-icon rounded-circle border border-white">
             <i class="fa fa-money text-white"></i></div>
@@ -67,8 +67,8 @@ crossorigin=""/>
         <div class="card-body">
           <div class="media align-items-center">
           <div class="media-body">
-            <p class="text-white">Bounce Rate</p>
-            <h4 class="text-white line-height-5">12.80%</h4>
+            <p class="text-white">Total Tempat Wisata</p>
+            <h4 class="text-white line-height-5">{{($wisata)}}</h4>
           </div>
           <div class="w-circle-icon rounded-circle border border-white">
             <i class="fa fa-pie-chart text-white"></i></div>

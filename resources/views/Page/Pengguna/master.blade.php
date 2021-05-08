@@ -106,8 +106,8 @@
     </li>
         <div class="brand-logo">
             <a href="index.html">
-            <img src="{{ asset ('dashboard/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
-            <h5 class="logo-text">Rukada</h5>
+            <img src="{{ asset ('dashboard/images/logo1-icon.png') }}" class="logo-icon" alt="logo icon">
+            <h5 class="logo-text">Project Tugas Akhir</h5>
         </a>
         </div>
     </ul>

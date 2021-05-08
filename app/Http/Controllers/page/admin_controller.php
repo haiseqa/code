@@ -10,14 +10,26 @@ use App\Database\tbpemilik;
 use App\Database\tbfoto_villa;
 use App\Database\tbfasilitas_villa;
 use App\Database\tbfasilitas;
+use App\Database\tblokasi_wisata;
 use App\Database\tbvilla;
 use App\Utils\makeid;
 use Illuminate\Support\Facades\Hash;
 
 class admin_controller extends Controller
 {
-    function dashboard(){
-        return view('Page.admin.dashboard');
+    function dashboard(Request $req){
+        $villa      = tbvilla::count();
+        $pemilik    = tbpemilik::count();
+        $fasilitas   = tbfasilitas::count();
+        $wisata     =  tblokasi_wisata::count();
+
+        return view('Page.admin.dashboard', [
+            'villa'     => $villa,
+            'pemilik'   => $pemilik,
+            'fasilitas' => $fasilitas,
+            'wisata'    => $wisata
+
+        ]);
     }
 
     function pemilik(){

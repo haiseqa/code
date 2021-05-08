@@ -82,6 +82,7 @@
                                     <td colspan="3">
                                         <button style="float: right;" type="submit"
                                             class="btn btn-primary">Edit</button>
+                                        <button style="float: right;" type="button" class="btn btn-primary" onclick="window.history.back();">CANCEL</button>
                                     </td>
                                 </tr>
                             </table>
@@ -147,6 +148,8 @@
             $("#longitude").val(long);
         });
     }
-
 </script>
+
+
+
 @endsection

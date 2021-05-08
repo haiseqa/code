@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputUsername" class="">Gender</label>
+                    <label for="exampleInputGender" class="">Gender</label>
                     <div class="position-relative has-icon-right">
                         {{-- <input type="text" name="gender" id="exampleInputUsername" class="form-control input-shadow"> --}}
                         <select name="gender" id="" class="form-control input-shadow">
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputPassword" class="">Alamat</label>
+                    <label for="exampleInputAlamat" class="">Alamat</label>
                     <div class="position-relative has-icon-right">
                         <input type="text" name="address" id="exampleInputAlamat" class="form-control input-shadow"
                             placeholder="Enter Address">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword" class="">Email</label>
+                    <label for="exampleInputEmail" class="">Email</label>
                     <div class="position-relative has-icon-right">
                         <input type="email" name="email" id="exampleInputNomorHp" class="form-control input-shadow"
                             placeholder="Enter Email">

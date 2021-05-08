@@ -24,9 +24,19 @@ class pemilik_controller extends Controller
         ->where([
             'tbpemilik.id_user' => $req->session()->get('iduser')
         ])->first();
-        return view('Page.pemilik.dashboard',[
 
-            'villa'     => $villa,
+        $booking = tbbooking::whereYear('created_at', Carbon::now()->format('Y'))
+        ->whereIn('id_villa', $villa->toArray())
+        ->selectRaw('MONTH(created_at) as month, COUNT(*) as jumlah_booking')
+        ->groupBy('month')->get();
+        $data_chart = array();
+        foreach ($booking as $key => $value) {
+            $data_chart[$value->month] = $value->jumlah_boking;
+        }
+        // dd($villa);
+        return view('Page.pemilik.dashboard',[
+            'data_chart'    => json_encode($data_chart)
+            // 'villa'     => $villa,
         ]);
     }
 

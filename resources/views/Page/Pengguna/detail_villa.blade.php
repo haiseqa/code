@@ -31,12 +31,12 @@ crossorigin=""/>
         <span>
             {!!str_replace("&nbsp;", " ", $villa->deskripsi)!!}
         </span>
+        <br>
         <span>
-            {!!str_replace("&nbsp;", " ", $villa->alamat_villa)!!}
+            <i class="zmdi zmdi-pin">  {!!str_replace("&nbsp;", " ", $villa->alamat_villa)!!} </i>
         </span>
-        <span>
-           Rp {{number_format($villa->harga_villa, 0, ',','.')}}
-        </span>
+        <br>
+        <br>
         <p>
             Fasilitas :
         </p>
@@ -45,6 +45,11 @@ crossorigin=""/>
             <span class="badge badge-dark shadow-dark m-1">{{$item->nama_fasilitas}}</span>
             @endforeach
         </p>
+        <br>
+        <span>
+        <label for="exampleInputAlamat" class="">Harga :</label>
+        Rp {{number_format($villa->harga_villa, 0, ',','.')}}
+        </span>
     </div>
 
     <div class="col-lg-6">
