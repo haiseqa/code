@@ -36,9 +36,7 @@ crossorigin=""/>
         <span>
             {!!str_replace("&nbsp;", " ", $villa->deskripsi)!!}
         </span>
-        <span>
-           Rp {{number_format($villa->harga_villa, 0, ',','.')}}
-        </span>
+
         <p>
             Fasilitas :
         </p>
@@ -47,6 +45,11 @@ crossorigin=""/>
             <span class="badge badge-dark shadow-dark m-1">{{$item->nama_fasilitas}}</span>
             @endforeach
         </p>
+
+        <span>
+        <label for="exampleInputHarga" class="">Harga :</label>
+           Rp {{number_format($villa->harga_villa, 0, ',','.')}}
+        </span>
     </div>
 
     <div class="col-lg-6">

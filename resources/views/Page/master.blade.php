@@ -113,8 +113,9 @@
            <div class="media">
              <div class="avatar"><img class="align-self-start mr-3" src="{{ !Session::has('foto_profile') ? asset('dashboard/images/user.png') : asset(Session::get('foto_profile')) }}" alt="user avatar"></div>
             <div class="media-body">
-            <h6 class="mt-2 user-title">{{Session::has('nama') ? Session::get('nama') : "Administrator"}}</h6>
-            <p class="user-subtitle">{{Session::has('email') ? Session::get('email') : "Administrator@admin.com"}}</p>
+            <h6 class="mt-2 user-title">{{Session::has('nama') ? Session::get('nama') : "Admin"}}</h6>
+            {{-- <h6 class="mt-2 user-title">{{{ isset(Session::has()->nama)}}}</h6> --}}
+            <p class="user-subtitle">{{Session::has('email') ? Session::get('email') : "Admin@admin.com"}}</p>
             </div>
            </div>
           </a>

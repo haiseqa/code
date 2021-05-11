@@ -22,7 +22,8 @@ class CreateTbbookingTable extends Migration
             $table->string('email')->unique();
             $table->string('nohp',12);
             // $table->foreign('id_wisatawan')->references('id_wisatawan')->on('tbwisatawan')->onDelete('cascade');
-            $table->foreign('id_villa')->references('id_villa')->on('tbvilla');
+            $table->foreign('id_villa')->references('id_villa')->on('tbvilla')->onDelete('cascade');
+            $table->string('path');
             $table->datetime('waktu_booking');
             $table->string('status_booking');
             $table->timestamps();

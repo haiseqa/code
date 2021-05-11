@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Rukada - Esport</title>
+  <title>Project Tugas Akhir</title>
   <!--favicon-->
   <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
 

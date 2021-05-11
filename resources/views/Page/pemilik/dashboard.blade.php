@@ -88,7 +88,7 @@ crossorigin=""/>
     <div class="col-12 col-lg-12 col-xl-12">
       <div class="card">
            <div class="card-header">
-            <i class="fa fa-line-chart"></i> Sales Report
+            <i class="fa fa-line-chart"></i> Booking
                 <div class="card-action">
 
           <div class="form-group mb-0">
