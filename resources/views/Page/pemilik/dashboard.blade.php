@@ -175,7 +175,7 @@ crossorigin=""/>
     var data_chart_villa = $.parseJSON(@json($data_chart));
     var villa = [];
     $(document).ready(function () {
-        // console.log(data_chart);
+        console.log(data_chart_villa);
         var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
         gradientStroke1.addColorStop(0, '#4facfe');
         gradientStroke1.addColorStop(1, '#00f2fe');

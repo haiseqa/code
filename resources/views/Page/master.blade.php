@@ -17,6 +17,8 @@
   {{-- Js --}}
   <script src="{{ asset('Mix/js/user_head.js') }}"></script>
 
+  <script src="{{asset('dashboard/plugins/Chart.js/Chart.min.js')}}"></script>
+
   <script>
       $.ajaxSetup({
           headers: {

@@ -29,9 +29,10 @@ class pemilik_controller extends Controller
         ->whereIn('id_villa', $villa->toArray())
         ->selectRaw('MONTH(created_at) as month, COUNT(*) as jumlah_booking')
         ->groupBy('month')->get();
+        // dd($booking);
         $data_chart = array();
         foreach ($booking as $key => $value) {
-            $data_chart[$value->month] = $value->jumlah_boking;
+            $data_chart[$value->month] = $value->jumlah_booking;
         }
         // dd($villa);
         return view('Page.pemilik.dashboard',[

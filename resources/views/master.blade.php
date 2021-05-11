@@ -71,6 +71,8 @@ crossorigin=""></script>
         <script>alert_info('{{Session::get('message')}}')</script>
     @endif
 
+    <script src="{{asset('dashboard/plugins/Chart.js/Chart.min.js')}}"></script>
+
     <script>
         $('.number').keyup(function(event){
             if(event.which >= 37 && event.which <= 40)return;
