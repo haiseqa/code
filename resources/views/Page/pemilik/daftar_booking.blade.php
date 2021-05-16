@@ -31,7 +31,7 @@
                 <td>{{$item->email}}</td>
                 <td>{{$item->nohp}}</td>
                 <td>{{$item->waktu_booking}}</td>
-                <td>{{empty($item->status_booking) ? "Booking" : ($item->status_booking === '1' ? "Selesai" : "Batal")}}</td>
+                <td>{{$item->status_booking === null ? "Booking" : ($item->status_booking === '1' ? "Selesai" : "Batal")}}</td>
                 {{-- <td>{{$item->status_villa === 'enable' ? "Aktif" : "Tidak Aktif"}}</td> --}}
 
                 <td>
