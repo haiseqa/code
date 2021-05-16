@@ -8,7 +8,7 @@ class tbbooking extends Model
 {
     protected $table = 'tbbooking';
     public $incrementing = false;
-    protected $primaryKey = 'string';
+    protected $primaryKey = 'id_booking';
     protected $keyType = 'string';
     protected $fillable = [
         'id_booking',

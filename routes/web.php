@@ -124,6 +124,8 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
         Route::post('/profile_pemilik/password', 'page\pemilik_controller@profile_password_post')->name('pemilik.profile_profile.password');
         Route::get('/detail_villa', 'page\pemilik_controller@detail_villa')->name('pemilik.detail_villa');
 
+        Route::get('villa/booking/status/{idbooking}/{status}', 'page\pemilik_controller@change_status')->name('pemilik.change_status');
+
     });
 
     Route::group([

@@ -318,6 +318,19 @@ class pemilik_controller extends Controller
 
     function booking_post(Request $req){
         $data = $req->all();
+        // dd($data);
+        $date_book = Carbon::createFromFormat('Y-m-d H:i', $data['waktubooking']);
+
+        if(tbbooking::where([
+            'id_villa'              => $data['id_villa']
+        ])->where(function($query) use($date_book){
+
+            $query->whereYear('waktu_booking', $date_book->year);
+            $query->whereMonth('waktu_booking', $date_book->month);
+            $query->whereDay('waktu_booking', $date_book->day);
+        })->exists()){
+            return back()->with('message', 'Vila Sudah Di Book pada Tanggal '. $date_book->format('d F Y '));
+        }
 
         $boooking = tbbooking::create([
             'id_booking'            => makeid::createId(10),
@@ -326,8 +339,7 @@ class pemilik_controller extends Controller
             'Alamat'                => $data['alamat'],
             'email'                 => $data['email'],
             'nohp'                  => $data['nohp'],
-            'waktu_booking'         => $data['waktubooking'],
-            'status_booking'        => "0"
+            'waktu_booking'         => $data['waktubooking']
         ]);
         if($boooking){
             return back()->with('message', 'Berhasil Booking');
@@ -335,7 +347,13 @@ class pemilik_controller extends Controller
         return back()->with('message', 'Gagal Booking');
     }
 
-    // function form_booking(Request $req){
-    //     return view('Page.Pengguna.form_booking');
-    // }
+    function change_status(Request $req, $idbooking, $status){
+        $booking = tbbooking::find($idbooking)->update([
+            'status_booking'    => $status
+        ]);
+        if($booking){
+            return redirect()->route('pemilik.booking')->with('message', 'berhasil');
+        }
+        return redirect()->route('pemilik.booking')->with('message', 'batal');
+    }
 }

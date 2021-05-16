@@ -31,16 +31,12 @@
                 <td>{{$item->email}}</td>
                 <td>{{$item->nohp}}</td>
                 <td>{{$item->waktu_booking}}</td>
-                <td>{{$item->status_booking}}</td>
+                <td>{{empty($item->status_booking) ? "Booking" : ($item->status_booking === '1' ? "Selesai" : "Batal")}}</td>
                 {{-- <td>{{$item->status_villa === 'enable' ? "Aktif" : "Tidak Aktif"}}</td> --}}
 
                 <td>
-                    <form id="form_" class="formdelete"
-                        action="">
-                        <a href="" button type="submit" class="btn btn-primary">detail</button></a>
-                        <a href="" button type="submit" class="btn btn-success">Gambar</button></a>
-                    <button type="button" id="" class="btn btn-danger btndelete">Delete</button>
-                    </form>
+                    <a href="{{route('pemilik.change_status', [$item->id_booking, '1'])}}"  class="btn btn-primary">Selesai</a>
+                    <a href="{{route('pemilik.change_status', [$item->id_booking, '0'])}}"  class="btn btn-danger">Batal</a>
                 </td>
 
             </tr>
