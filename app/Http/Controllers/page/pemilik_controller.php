@@ -146,7 +146,7 @@ class pemilik_controller extends Controller
             'deskripsi'     => $data['deskripsi'],
             'longitude'     => $data['longitude'],
             'latitude'      => $data['latitude'],
-            'status'        => $data['status']
+            // 'status'        => $data['status']
         ]);
 
         //upload gambar

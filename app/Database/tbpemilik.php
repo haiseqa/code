@@ -18,6 +18,7 @@ class tbpemilik extends Model
         'alamat',
         'nohp',
         'email',
-        'foto_profile'
+        'foto_profile',
+        'status_pemilik'
     ];
 }

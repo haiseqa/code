@@ -148,7 +148,7 @@
 	<footer class="footer">
         <div class="container">
           <div class="text-center">
-            Copyright © 2018 Rukada Admin
+            Copyright © 2021 Project Tugas Akhir
           </div>
         </div>
       </footer>

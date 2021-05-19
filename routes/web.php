@@ -79,6 +79,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
         route::get('/pemilik/edit/{idpemilik}','page\admin_controller@editpemilik')->name('admin.pemilik.edit');
         route::post('/pemilik/edit/{idpemilik}','page\admin_controller@posteditpemilik');
         route::get('/pemilik/delete/{id_user}','page\admin_controller@deletepemilik')->name('admin.pemilik.delete');
+        route::get('/pemilik/status/{cmd}', 'page\admin_controller@change_status_pemilik')->name('admin.change_status_pemilik');
 
         //data villa
         route::get('admin/daftarvilla', 'page\admin_controller@daftarvilla')->name('admin.daftarvilla');

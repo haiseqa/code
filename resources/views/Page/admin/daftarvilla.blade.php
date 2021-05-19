@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card">
-    <div class="card-header"><i class="fa fa-table"></i> Daftar Villa
+    <div class="card-header"><i class="fa fa-table"></i> Data Villa
         {{-- <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#addvilla">Add Villa</button> --}}
     </div>
     <div class="card-body">

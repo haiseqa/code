@@ -14,6 +14,7 @@
               <th scope="col">Alamat</th>
               <th scope="col">No Hp</th>
               <th scope="col">Email</th>
+              <th scope="col">Status</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -26,14 +27,23 @@
                 <td>{{$item->alamat}}</td>
                 <td>{{$item->nohp}}</td>
                 <td>{{$item->email}}</td>
+                <td>{{$item->status_pemilik ==='enable'? "aktif" : "Tidak Aktif"}}</td>
+
 
                 <td>
-                    <form id="form_{{$item->id_user}}" class="formdelete"
-                        action="{{route('admin.pemilik.delete',[$item->id_user])}}">
-                        <a href="{{route('admin.pemilik.edit', [$item->id_pemilik])}}"
-                            class="btn btn-primary">Edit</a>
-                        <button type="button"  id="{{$item->id_user}}" class="btn btn-danger btndelete">Delete</button>
+                    @if($item->status_pemilik === 'enable')
+                    <form action="{{route('admin.change_status_pemilik', ['disable'])}}" method="get">
+                        <input type="text" name="id_pemilik" value="{{$item->id_pemilik}}" hidden>
+                        <button type="submit" id="btnEdit" class="btn btn-danger">Disable</button>
+                        <a href="{{route('admin.pemilik.edit', [$item->id_pemilik])}}" button type="submit" class="btn btn-primary">Edit</button></a>
                     </form>
+                    @else
+                    <form action="{{route('admin.change_status_pemilik', ['enable'])}}" method="get">
+                        <input type="text" name="id_pemilik" value="{{$item->id_pemilik}}" hidden>
+                        <button type="submit" id="btnEdit" class="btn btn-success">Active</button>
+                        <a href="{{route('admin.pemilik.edit', [$item->id_pemilik])}}" button type="submit" class="btn btn-primary">Edit</button></a>
+                    </form>
+                    @endif
 
                 </td>
               </tr>

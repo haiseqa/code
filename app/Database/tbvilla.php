@@ -19,7 +19,7 @@ class tbvilla extends Model
         'deskripsi',
         'longitude',
         'latitude',
-        'status',
+        // 'status',
         'status_villa'
     ];
 }

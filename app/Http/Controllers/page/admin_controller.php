@@ -39,6 +39,16 @@ class admin_controller extends Controller
         ]);
     }
 
+    function change_status_pemilik(Request $req, $cmd){
+        $pemilik = tbpemilik::find($req->input('id_pemilik'))->update([
+            'status_pemilik'    =>$cmd
+        ]);
+        if($pemilik){
+            return back()->with('message', "Pemilik Berhasi Disable");
+        }
+        return back()->with('message', "Pemilik Gagal Disable");
+    }
+
     function editpemilik($idpemilik, Request $req){
         $pemilik = tbpemilik::find($idpemilik);
         return view('Page.admin.formpemilik', [
