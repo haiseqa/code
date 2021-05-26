@@ -197,7 +197,7 @@
     var CurrentPosition = "";
     var maps = "";
     var circle = "";
-    var zoom = 14;
+    var zoom = 13;
     var data_villa = @json($data_villa);
     var user_marker ="";
 
@@ -208,8 +208,8 @@
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 CurrentPosition = {
-                    long: position.coords.longitude,
-                    lat: position.coords.latitude
+                    long: 115.53551815800168,
+                    lat: -8.72671740678858
                 };
                 drawMaps();
             });
@@ -231,7 +231,7 @@
         // console.log(CurrentPosition);
         maps = L.map('map').setView([CurrentPosition.lat, CurrentPosition.long], zoom);
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Made With :hearts: By Wayan Setiawan'
+            attribution: 'Made With Me'
         }).addTo(maps);
 
         $.each($.parseJSON(data_villa), (index, value)=>{

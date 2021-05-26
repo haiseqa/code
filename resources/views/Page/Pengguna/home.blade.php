@@ -130,7 +130,7 @@
 <script type="text/javascript">
     var CurrentPosition = "";
     var maps = "";
-    var zoom = 11;
+    var zoom = 12;
     var data_villa;
     var harga = 'asc';
     var object_wisata = 'all';
@@ -172,8 +172,8 @@
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 CurrentPosition = {
-                    long: position.coords.longitude,
-                    lat: position.coords.latitude
+                    long: 115.5462150131528,
+                    lat: -8.731340649191766,
                 };
                 // drawMaps();
             });

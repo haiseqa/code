@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Project Tugas Akhir</title>
+  <title>Villa Nusa Penida</title>
   <!--favicon-->
   <link rel="icon" href="{{ asset('assets/images/favicon1.ico') }}" type="image/x-icon">
 
@@ -115,9 +115,9 @@
            <div class="media">
              <div class="avatar"><img class="align-self-start mr-3" src="{{ !Session::has('foto_profile') ? asset('dashboard/images/user.png') : asset(Session::get('foto_profile')) }}" alt="user avatar"></div>
             <div class="media-body">
-            <h6 class="mt-2 user-title">{{Session::has('nama') ? Session::get('nama') : "Admin"}}</h6>
+            <h6 class="mt-2 user-title">{{Session::has('nama') ? Session::get('nama') : "dika"}}</h6>
             {{-- <h6 class="mt-2 user-title">{{{ isset(Session::has()->nama)}}}</h6> --}}
-            <p class="user-subtitle">{{Session::has('email') ? Session::get('email') : "Admin@admin.com"}}</p>
+            <p class="user-subtitle">{{Session::has('email') ? Session::get('email') : "dika@gmail.com"}}</p>
             </div>
            </div>
           </a>
@@ -148,7 +148,7 @@
 	<footer class="footer">
         <div class="container">
           <div class="text-center">
-            Copyright © 2021 Project Tugas Akhir
+            Copyright © 2021 Villa Nusa Penida
           </div>
         </div>
       </footer>

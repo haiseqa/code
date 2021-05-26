@@ -49,6 +49,11 @@ class authController extends Controller
                 'idpemilik' => $pemilik->id_pemilik
             ]);
 
+            $req->session()->put([
+                'nama'      => $pemilik->nama,
+                'email'     => $pemilik->email
+            ]);
+
         }
         return redirect()->route('home');
 

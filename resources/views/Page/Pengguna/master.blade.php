@@ -107,7 +107,7 @@
         <div class="brand-logo">
             <a href="index.html">
             <img src="{{ asset ('dashboard/images/logo1-icon.png') }}" class="logo-icon" alt="logo icon">
-            <h5 class="logo-text">Project Tugas Akhir</h5>
+            <h5 class="logo-text">Villa Nusa Penida</h5>
         </a>
         </div>
     </ul>
@@ -140,7 +140,7 @@
 	<footer class="footer">
         <div class="container">
           <div class="text-center">
-            Copyright © 2021 Project Tugas Akhir
+            Copyright © 2021 Villa Nusa Penida
           </div>
         </div>
       </footer>

@@ -329,7 +329,7 @@ class pemilik_controller extends Controller
             $query->whereMonth('waktu_booking', $date_book->month);
             $query->whereDay('waktu_booking', $date_book->day);
         })->exists()){
-            return back()->with('message', 'Vila Sudah Di Book pada Tanggal '. $date_book->format('d F Y '));
+            return back()->with('message', 'Mohon Maaf Villa ini Sudah Di Book pada Tanggal '. $date_book->format('d F Y '));
         }
 
         $boooking = tbbooking::create([

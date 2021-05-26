@@ -115,7 +115,7 @@ Route::get('/api/villa/get', 'Page\home_controller@get_villa')->name('api.get.vi
         Route::get('/daftarvilla', 'page\pemilik_controller@daftarvilla')->name('pemilik.daftarvilla');
 
         Route::get('/gambar/{idvilla}','page\pemilik_controller@galeri')->name('pemilik_villa.galeri');
-        Route::get('/delete/{idfoto}', 'page\pemilik_controller@deletegaleri')->name('pemilik.deletegaleri');
+        Route::get('/delete/gambar/{idfoto}', 'page\pemilik_controller@deletegaleri')->name('pemilik.deletegaleri');
         // Route::get('/tambah/{idfoto}', 'page\pemilik_controller@tambahgaleri')->name('pemilik.tambahgaleri');
         Route::post('/tambah/{idfoto}', 'page\pemilik_controller@tambahgaleri')->name('pemilik.tambahgaleri');
 
