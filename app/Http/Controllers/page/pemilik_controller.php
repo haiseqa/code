@@ -117,7 +117,7 @@ class pemilik_controller extends Controller
             ]);
         }
         if($villa){
-            return redirect()->route('pemilik.detail_villa',[$id_villa])->with('message', 'berhasil');
+            return redirect()->route('pemilik.detail_villa',[$id_villa])->with('message', 'data berhasil disimpan');
         }
         return back()->with('message','gagal');
 
@@ -352,8 +352,8 @@ class pemilik_controller extends Controller
             'status_booking'    => $status
         ]);
         if($booking){
-            return redirect()->route('pemilik.booking')->with('message', 'berhasil');
+            return redirect()->route('pemilik.booking')->with('message', 'Status Berhasil Diubah');
         }
-        return redirect()->route('pemilik.booking')->with('message', 'batal');
+        return redirect()->route('pemilik.booking')->with('message', 'Status Gagal Dibuah');
     }
 }

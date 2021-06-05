@@ -32,7 +32,6 @@
                     </div>
                 </div>
 
-
 			 <button type="submit" class="btn btn-primary shadow-primary btn-block waves-effect waves-light">Sign In</button>
 
 			 </form>

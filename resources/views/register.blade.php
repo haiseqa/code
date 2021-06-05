@@ -8,7 +8,7 @@
             <div class="text-center">
                 <img src="{{ asset('dashboard/images/logo1-icon.png') }}" alt="logo icon">
             </div>
-            <div class="card-title text-uppercase text-center py-3">Sign In</div>
+            <div class="card-title text-uppercase text-center py-3">Register</div>
             <form action="{{route('register')}}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-group">

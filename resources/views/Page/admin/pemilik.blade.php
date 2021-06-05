@@ -57,30 +57,23 @@
   <script>
     $(document).ready(function() {
      //Default data table
-       $('#pemilik').DataTable();
+      $('#default-datatable').DataTable();
 
-       $('.btndelete').on('click',function(event){
+      $('.formdelete').on('click',function(event){
           event.preventDefault();
-          let idform = this.id;
-          let form = $("#form_"+ idform);
+          let form = $(this);
           swal({
-              title: "Are you sure?",
-              text: "Once deleted, you will not be able to recover this imaginary file!",
+              title: "hapus?",
+              text: "hapus pemilik villa",
               icon: "warning",
               buttons:true,
               dangerMode:true
-          }).
-          then((value) => {
-                if (value) {
-                    // swal("Poof! Your imaginary file has been deleted!", {
-                    //     icon: "success",
-                    //   });
-                      form.submit();
-                    } else {
-                    //   swal("Your imaginary file is safe!");
-                    }
-                  });
-              });
+          }).then((value)=>{
+              if (value) {
+                form.submit();
+              }
+          });
+      });
 
 
 
@@ -93,6 +86,9 @@
        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
 
      } );
+
+   </script>
+
 
    </script>
 @endsection

@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="input-3">Sort By</label>
+                            <label for="input-3">Sort By Lokasi Wisata</label>
                             <div class="btn-group m-1" role="group">
                                 <select id="lokasiwisata"
                                     class="form-control input-shadow btn btn-inverse-dark waves-effect waves-light dropdown-toggle">
