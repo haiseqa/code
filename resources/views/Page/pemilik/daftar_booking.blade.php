@@ -22,10 +22,12 @@
             </tr>
           </thead>
         <tbody>
+            <?php $no = 0;?>
             @foreach ($boooking as $item)
+            <?php $no++ ;?>
 
             <tr>
-                <th scope="row"></th>
+                <th scope="row">{{$no}}</th>
                 <td>{{$item->nama_booking}}</td>
                 <td>{{$item->Alamat}}</td>
                 <td>{{$item->email}}</td>

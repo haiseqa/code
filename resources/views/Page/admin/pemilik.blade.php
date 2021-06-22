@@ -19,9 +19,11 @@
             </tr>
           </thead>
         <tbody>
+            <?php $no = 0;?>
             @foreach ($pemilik as $item)
+            <?php $no++ ;?>
             <tr>
-                <th scope="row"></th>
+                <th scope="row">{{$no}}</th>
                 <td>{{$item->nama}}</td>
                 <td>{{$item->jenis_kelamin}}</td>
                 <td>{{$item->alamat}}</td>

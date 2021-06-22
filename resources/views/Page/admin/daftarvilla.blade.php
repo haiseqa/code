@@ -23,10 +23,11 @@
             </tr>
           </thead>
         <tbody>
+            <?php $no = 0;?>
             @foreach ($villa as $item)
-
+            <?php $no++ ;?>
             <tr>
-                <th scope="row"></th>
+                <th scope="row">{{$no}}</th>
                 <td>{{$item->nama_villa}}</td>
                 <td>{{$item->alamat_villa}}</td>
                 <td>{{$item->harga_villa}}</td>

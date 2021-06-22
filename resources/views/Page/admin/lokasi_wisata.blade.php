@@ -18,19 +18,21 @@
             </tr>
           </thead>
         <tbody>
+            <?php $no = 0;?>
             @foreach ($lokasiwisata as $item)
+            <?php $no++ ;?>
             <tr>
-                <th scope="row"></th>
+                <th scope="row">{{$no}}</th>
                 <td>{{$item->nama_wisata}}</td>
                 <td>{{$item->latitude}}</td>
                 <td>{{$item->longitude}}</td>
 
                 <td>
-                    <form id="form_" class="formdelete"
+                    <form id="form_{{$item->id_lokasi_wisata}}" class="formdelete"
                         action="{{route('admin.delete.lokasi_wisata',[$item->id_lokasi_wisata])}}">
                         <a href="{{route('admin.edit.lokasi_wisata', [$item->id_lokasi_wisata])}}"
                             class="btn btn-primary">Edit</a>
-                        <button type="button"  id="" class="btn btn-danger btndelete">Delete</button>
+                        <button type="button"  id="{{$item->id_lokasi_wisata}}" class="btn btn-danger btndelete">Delete</button>
                     </form>
 
                 </td>

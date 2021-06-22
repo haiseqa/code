@@ -18,11 +18,12 @@
             </tr>
           </thead>
         <tbody>
-
+            <?php $no = 0;?>
             @foreach ($fasilitas as $item)
+            <?php $no++ ;?>
             <tr>
 
-                <th scope="row"></th>
+                <th scope="row">{{$no}}</th>
                 <td>{{$item->nama_fasilitas}}</td>
                 <td>
                     <form id="form_{{$item->id_fasilitas}}" class="formdelete"

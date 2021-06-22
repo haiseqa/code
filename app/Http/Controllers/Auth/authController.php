@@ -25,6 +25,16 @@ class authController extends Controller
             return back()->with('message', 'Username Atau Password Salah');
         }
 
+        $pemilik = tbpemilik::where([
+            'id_user'   =>$user->id_user
+        ])->first();
+
+        if(!empty($pemilik)){
+            if($pemilik->status !== 'enable'){
+                return back()->with('message', 'User sudah dinonaktifkan');
+            }
+        }
+
         if(!Hash::check($req->input('password'), $user->password)){
             return back()->with('message', 'Username Atau Password Salah');
         }
@@ -75,6 +85,11 @@ class authController extends Controller
                 'password'  => 'required'
             ]);
             $data = $req->all();
+            if(tbpemilik::where([
+                'email' => $data['email']
+            ])->exists()) {
+                return back()->with('message', 'email sudah digunakan');
+            }
             $iduser = makeid::createid(10);
             $idpemilik = makeid::createid(10);
             // dd($req->all());
@@ -97,7 +112,7 @@ class authController extends Controller
             if($pemilik){
                 return redirect()->route('login')->with('message','Berhasil di daftarkan');
             }
-            return back()->with('message','masih berfikir');
+            return back()->with('message','Gagal di daftarkan');
 
         }
         function logout(Request $req){
