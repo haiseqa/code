@@ -16,6 +16,7 @@ crossorigin=""/>
   }
 </style>
 
+<a> Selamat Datang {{Session::has('nama') ? Session::get('nama') : "dika"}}<a>
 <div class="row mt-3">
     <div class="col-12 col-lg-6 col-xl-3">
       <div class="card gradient-bloody">
